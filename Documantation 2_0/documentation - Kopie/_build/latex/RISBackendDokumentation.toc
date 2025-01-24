@@ -1,0 +1,83 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Inhaltsverzeichnis}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Projektplanung und Analyse}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Einleitung}{3}{subsection.1.1.1}%
+\contentsline {subsubsection}{Projektumfeld}{3}{subsubsection*.3}%
+\contentsline {subsubsection}{Projektziel}{4}{subsubsection*.4}%
+\contentsline {subsubsection}{Ausgangssituation}{4}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {1.1.2}Abgrenzung des Aufgabenbereichs}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Projektplanung}{4}{subsection.1.1.3}%
+\contentsline {subsubsection}{Projektphasen}{4}{subsubsection*.6}%
+\contentsline {subsubsection}{Grobe Zeitplanung}{5}{subsubsection*.7}%
+\contentsline {subsubsection}{Ressourcenplanung}{5}{subsubsection*.8}%
+\contentsline {subsection}{\numberline {1.1.4}Analysephase}{5}{subsection.1.1.4}%
+\contentsline {subsubsection}{Auswahl der Technologieplattform}{5}{subsubsection*.9}%
+\contentsline {subsubsection}{Ist\sphinxhyphen {}Analyse}{6}{subsubsection*.10}%
+\contentsline {subsubsection}{Wirtschaftlichkeitsanalyse}{6}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {1.1.5}Vorgehensmodelle}{6}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Make or Buy\sphinxhyphen {}Entscheidung}{7}{subsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.1.7}Nutzwertanalyse}{7}{subsection.1.1.7}%
+\contentsline {subsection}{\numberline {1.1.8}Anwendungsfälle}{8}{subsection.1.1.8}%
+\contentsline {section}{\numberline {1.2}Entwurf}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Architekturdesign}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}MTV\sphinxhyphen {}Architektur}{8}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}ERD\sphinxhyphen {}Diagramm}{8}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Systemkomponenten}{8}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Beziehungen}{9}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}Datenmodell}{9}{subsection.1.2.6}%
+\contentsline {subsection}{\numberline {1.2.7}Cache\sphinxhyphen {}Strategie}{10}{subsection.1.2.7}%
+\contentsline {section}{\numberline {1.3}Implementierung}{10}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Details der Umsetzung}{10}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Page\sphinxhyphen {}Modell}{10}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Block\sphinxhyphen {}Modell}{11}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}MenuItem\sphinxhyphen {}Modell}{11}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}PageBlock\sphinxhyphen {}Modell}{11}{subsection.1.3.5}%
+\contentsline {subsection}{\numberline {1.3.6}Caching}{11}{subsection.1.3.6}%
+\contentsline {subsection}{\numberline {1.3.7}Django Signals}{12}{subsection.1.3.7}%
+\contentsline {subsection}{\numberline {1.3.8}Software \& Technologien}{12}{subsection.1.3.8}%
+\contentsline {section}{\numberline {1.4}Test und Durchführung}{13}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Testphase}{13}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Implementierte Tests}{13}{subsection.1.4.2}%
+\contentsline {subsubsection}{Model Tests (test\_models.py)}{13}{subsubsection*.12}%
+\contentsline {subsubsection}{Cache Tests (test\_cache.py)}{14}{subsubsection*.13}%
+\contentsline {subsubsection}{View Tests (test\_views.py)}{14}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {1.4.3}Testergebnisse}{15}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Testprotokolle}{15}{subsection.1.4.4}%
+\contentsline {section}{\numberline {1.5}Models}{15}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}TimestampedModel(base)}{16}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Page Model}{17}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Block Model}{18}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}MenuItem Model}{19}{subsection.1.5.4}%
+\contentsline {subsection}{\numberline {1.5.5}PageBlock Model}{20}{subsection.1.5.5}%
+\contentsline {subsection}{\numberline {1.5.6}MTV\sphinxhyphen {}Architektur}{21}{subsection.1.5.6}%
+\contentsline {section}{\numberline {1.6}Glosar}{21}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Begriffe}{21}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Abkürzungen}{22}{subsection.1.6.2}%
+\contentsline {section}{\numberline {1.7}Diagramme}{23}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Use Case Diagramm}{24}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}ERD\sphinxhyphen {}Diagramm}{24}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Signalfluss\sphinxhyphen {}Diagramm}{25}{subsection.1.7.3}%
+\contentsline {subsection}{\numberline {1.7.4}Seiten\sphinxhyphen {}Rendering\sphinxhyphen {}Diagramm}{25}{subsection.1.7.4}%
+\contentsline {subsection}{\numberline {1.7.5}Navigations\sphinxhyphen {}Diagramm}{26}{subsection.1.7.5}%
+\contentsline {subsection}{\numberline {1.7.6}MTV\sphinxhyphen {}Architektur}{26}{subsection.1.7.6}%
+\contentsline {section}{\numberline {1.8}Bilder}{27}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Detallierter Zeitplanung}{27}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Fazit}{28}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}Soll\sphinxhyphen {}/Ist\sphinxhyphen {}Vergleich}{28}{subsection.1.10.1}%
+\contentsline {subsection}{\numberline {1.10.2}Projektziel erreicht}{29}{subsection.1.10.2}%
+\contentsline {subsection}{\numberline {1.10.3}Zeitunterschied}{29}{subsection.1.10.3}%
+\contentsline {subsection}{\numberline {1.10.4}Lessons Learned}{29}{subsection.1.10.4}%
+\contentsline {subsection}{\numberline {1.10.5}Ausblick}{30}{subsection.1.10.5}%
+\contentsline {subsection}{\numberline {1.10.6}Referenzen}{30}{subsection.1.10.6}%
+\contentsline {section}{\numberline {1.11}Projektantrag}{30}{section.1.11}%
+\contentsline {subsection}{\numberline {1.11.1}Thema der Projektarbeit}{30}{subsection.1.11.1}%
+\contentsline {subsection}{\numberline {1.11.2}1. Thema der Projektarbeit}{31}{subsection.1.11.2}%
+\contentsline {subsection}{\numberline {1.11.3}2. Geplanter Bearbeitungszeitraum}{31}{subsection.1.11.3}%
+\contentsline {subsection}{\numberline {1.11.4}3. Ausgangssituation}{31}{subsection.1.11.4}%
+\contentsline {subsection}{\numberline {1.11.5}4. Projektziel}{31}{subsection.1.11.5}%
+\contentsline {subsection}{\numberline {1.11.6}5. Zeitplanung}{31}{subsection.1.11.6}%
+\contentsline {subsection}{\numberline {1.11.7}6. Anlagen}{32}{subsection.1.11.7}%
+\contentsline {subsection}{\numberline {1.11.8}7. Präsentationsmittel}{32}{subsection.1.11.8}%
+\contentsline {subsection}{\numberline {1.11.9}8. Hinweis}{32}{subsection.1.11.9}%
+\contentsline {chapter}{Python-Modulindex}{33}{section*.56}%
+\contentsline {chapter}{Stichwortverzeichnis}{35}{section*.57}%

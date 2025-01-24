@@ -1,0 +1,82 @@
+settings.py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nombre_de_tu_bd',
+        'USER': 'tu_usuario',
+        'PASSWORD': 'tu_contraseña',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+from django.db import models
+
+
+# Abstract model to provide timestamp fields for all models that require created_at and updated_at fields.
+class TimestampedModel(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
+
+
+# Model representing a Page with relevant details like title, URL path, language, and metadata.
+class Page(TimestampedModel):
+    title = models.CharField(max_length=255)
+    url_path = models.CharField(max_length=2048)
+    language = models.CharField(
+        max_length=2,
+        choices=[('EN', 'English'), ('DE', 'Deutsch')],
+        default='DE',
+    )
+    meta_description = models.TextField(blank=True, null=True)
+    meta_keywords = models.CharField(max_length=255, blank=True, null=True)
+    is_published = models.BooleanField(default=False)
+    published_at = models.DateTimeField(blank=True, null=True)
+
+    class Meta:
+        # Adding indexes to improve the query performance for specific fields.
+        indexes = [
+            models.Index(fields=['url_path']),
+            models.Index(fields=['is_published']),
+        ]
+
+
+# Model representing a reusable content Block with a template and sorting order.
+class Block(TimestampedModel):
+    template = models.TextField()
+    sorting = models.IntegerField()
+
+    class Meta:
+        # Adding an index for the sorting field to improve sorting operations.
+        indexes = [
+            models.Index(fields=['sorting']),
+        ]
+
+
+# Model representing a MenuItem that links to a Page with relevant details for display.
+class MenuItem(TimestampedModel):
+    page = models.ForeignKey(Page, on_delete=models.CASCADE)
+    template = models.TextField()
+    sorting = models.IntegerField()
+
+    class Meta:
+        # Adding an index for the sorting field to improve sorting operations.
+        indexes = [
+            models.Index(fields=['sorting']),
+        ]
+
+
+# Model representing the many-to-many relationship between Pages and Blocks.
+class PageBlock(models.Model):
+    page = models.ForeignKey(Page, on_delete=models.CASCADE)
+    block = models.ForeignKey(Block, on_delete=models.CASCADE)
+
+    class Meta:
+        # Adding a unique constraint to ensure each page-block combination is unique.
+        constraints = [
+            models.UniqueConstraint(fields=['page', 'block'], name='unique_page_block')
+        ]

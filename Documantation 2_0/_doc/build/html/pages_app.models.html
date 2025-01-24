@@ -1,0 +1,2130 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pages_app.models package &mdash; RIS-Web Backend 1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=56dcb7b8"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pages_app.tests package" href="pages_app.tests.html" />
+    <link rel="prev" title="pages_app.migrations package" href="pages_app.migrations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RIS-Web Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#installation-steps">Installation Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#database-setup">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#start-development-server">Start Development Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/db_schema.html">Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/db_schema.html#model-overview">Model Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/db_schema.html#model-details">Model Details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#page-model">Page Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#block-model">Block Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#menuitem-model">MenuItem Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models/db_schema.html#key-features">Key Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views/index.html">Views Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="views/home.html">Home View Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#key-functions">Key Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#cache-implementation">Cache Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#models-used">Models Used</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views/page.html">Page Views Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html#key-components">Key Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html#cache-configuration">Cache Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="views/index.html#home-view">Home View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views/index.html#page-view">Page View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment/index.html">Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/index.html#deployment-steps">Deployment Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/index.html#example-configuration">Example Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/endpoints.html">API Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/endpoints.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/endpoints.html#core-endpoints">Core Endpoints</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html">Authentication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/authentication.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/authentication.html#authentication-methods">Authentication Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/authentication.html#security-configuration">Security Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/examples.html">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/examples.html#api-usage-examples">API Usage Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/authentication.html">Authentication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/authentication.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/authentication.html#authentication-methods">Authentication Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/authentication.html#security-configuration">Security Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/examples.html#api-usage-examples">API Usage Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/examples.html#page-creation">Page Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/examples.html#block-management">Block Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/examples.html#cache-operations">Cache Operations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/endpoints.html">API Endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/endpoints.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/endpoints.html#core-endpoints">Core Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/endpoints.html#page-management">Page Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/endpoints.html#block-management">Block Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pages_app.html">pages_app package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="pages_app.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html">pages_app.migrations package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pages_app.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.tests.html">pages_app.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html">pages_app.views package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app.admin">pages_app.admin module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin"><code class="docutils literal notranslate"><span class="pre">BlockAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin"><code class="docutils literal notranslate"><span class="pre">PageAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app.apps">pages_app.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app.urls">pages_app.urls module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#url-patterns">URL Patterns:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pattern-matching">Pattern Matching:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#example-usage">Example Usage:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#see-also">See Also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app.views">pages_app.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#id1">Pages App Views Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.views.render_page"><code class="docutils literal notranslate"><span class="pre">render_page()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.__author__"><code class="docutils literal notranslate"><span class="pre">__author__</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html">API Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/endpoints.html">API Endpoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/authentication.html">Authentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#authentication">Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#endpoints">Endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="views/index.html">Views Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="views/index.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html">Home View Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html">Page Views Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views/index.html#home-view">Home View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="views/index.html#page-view">Page View</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models/db_schema.html">Database Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#model-overview">Model Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#model-details">Model Details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="models/db_schema.html#page-model">Page Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models/db_schema.html#block-model">Block Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models/db_schema.html#menuitem-model">MenuItem Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#key-features">Key Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="pages_app.html">pages_app package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pages_app.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pages_app.migrations.html">pages_app.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0001_initial">pages_app.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0002_menuitem_name">pages_app.migrations.0002_menuitem_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0003_block_name_page_name">pages_app.migrations.0003_block_name_page_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0004_alter_block_name">pages_app.migrations.0004_alter_block_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0005_historicalblock_historicalmenuitem_historicalpage_and_more">pages_app.migrations.0005_historicalblock_historicalmenuitem_historicalpage_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0006_block_image_historicalblock_image">pages_app.migrations.0006_block_image_historicalblock_image module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0007_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0007_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0008_remove_page_pages_app_p_publish_9c7cf5_idx_and_more">pages_app.migrations.0008_remove_page_pages_app_p_publish_9c7cf5_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0009_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0009_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0010_remove_page_pages_app_p_publish_9c7cf5_idx_and_more">pages_app.migrations.0010_remove_page_pages_app_p_publish_9c7cf5_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0011_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0011_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0012_block_script_historicalblock_script">pages_app.migrations.0012_block_script_historicalblock_script module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0013_remove_block_script_remove_historicalblock_script">pages_app.migrations.0013_remove_block_script_remove_historicalblock_script module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pages_app.models package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.models.base">pages_app.models.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.models.block">pages_app.models.block module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.models.menu_item">pages_app.models.menu_item module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.models.page">pages_app.models.page module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.models.page_block">pages_app.models.page_block module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.models.signals">pages_app.models.signals module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.tests.html">pages_app.tests package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.tests.html#module-pages_app.tests.test_cache">pages_app.tests.test_cache module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.tests.html#module-pages_app.tests.test_models">pages_app.tests.test_models module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.tests.html#module-pages_app.tests.test_views">pages_app.tests.test_views module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.tests.html#module-pages_app.tests">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.views.html">pages_app.views package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html#module-pages_app.views.home">pages_app.views.home module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html#module-pages_app.views.page">pages_app.views.page module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html#module-pages_app.views">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app.admin">pages_app.admin module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin"><code class="docutils literal notranslate"><span class="pre">BlockAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin.media"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.media</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin.media"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.media</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin"><code class="docutils literal notranslate"><span class="pre">PageAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">PageAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">PageAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin.media"><code class="docutils literal notranslate"><span class="pre">PageAdmin.media</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">PageAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.get_block_name"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.get_block_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.get_page_title"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.get_page_title()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.list_filter"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.list_filter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.media"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.media</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app.apps">pages_app.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig.name"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig.ready"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.ready()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app.urls">pages_app.urls module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#url-patterns">URL Patterns:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pattern-matching">Pattern Matching:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#example-usage">Example Usage:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#see-also">See Also:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app.views">pages_app.views module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#id1">Pages App Views Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.views.render_page"><code class="docutils literal notranslate"><span class="pre">render_page()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.__author__"><code class="docutils literal notranslate"><span class="pre">__author__</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RIS-Web Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Modules</a></li>
+          <li class="breadcrumb-item"><a href="pages_app.html">pages_app package</a></li>
+      <li class="breadcrumb-item active">pages_app.models package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pages_app.models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pages-app-models-package">
+<h1>pages_app.models package<a class="headerlink" href="#pages-app-models-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pages_app.models.base">
+<span id="pages-app-models-base-module"></span><h2>pages_app.models.base module<a class="headerlink" href="#module-pages_app.models.base" title="Link to this heading"></a></h2>
+<p>Base Model Module</p>
+<p>Provides base model classes with common functionality for all models in the application.</p>
+<dl class="simple">
+<dt>Classes:</dt><dd><p>TimestampedModel: Abstract base class that adds timestamp tracking.</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.base.</span></span><span class="sig-name descname"><span class="pre">TimestampedModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/base.html#TimestampedModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.base.TimestampedModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Abstract base model that automatically tracks creation and modification dates.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#pages_app.models.base.TimestampedModel.created_at" title="Link to this definition"></a></dt>
+<dd><p>Timestamp of when the record was created</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DateTime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#pages_app.models.base.TimestampedModel.updated_at" title="Link to this definition"></a></dt>
+<dd><p>Timestamp of when the record was last modified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DateTime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an abstract base class and should not be used directly.
+Inherit from this class to add timestamp functionality to your models.</p>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/pages_app/models/base.html#TimestampedModel.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.base.TimestampedModel.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel.Meta.abstract">
+<span class="sig-name descname"><span class="pre">abstract</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pages_app.models.base.TimestampedModel.Meta.abstract" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.base.TimestampedModel.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.base.TimestampedModel.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.base.TimestampedModel.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.base.TimestampedModel.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.base.TimestampedModel.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pages_app.models.block">
+<span id="pages-app-models-block-module"></span><h2>pages_app.models.block module<a class="headerlink" href="#module-pages_app.models.block" title="Link to this heading"></a></h2>
+<p>Block Model Module</p>
+<p>This module defines the Block model which represents content blocks in the CMS.
+Blocks are reusable content components that can be included in multiple pages.</p>
+<dl class="simple">
+<dt>Key Features:</dt><dd><ul class="simple">
+<li><p>Template-based content rendering</p></li>
+<li><p>Flexible content positioning</p></li>
+<li><p>Image attachment support</p></li>
+<li><p>Version history tracking</p></li>
+<li><p>Automatic timestamp management</p></li>
+</ul>
+</dd>
+<dt>Dependencies:</dt><dd><ul class="simple">
+<li><p>django.db.models</p></li>
+<li><p>simple_history.models.HistoricalRecords</p></li>
+<li><p>.base.TimestampedModel</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.block.Block">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.block.</span></span><span class="sig-name descname"><span class="pre">Block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/block.html#Block"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.block.Block" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pages_app.models.base.TimestampedModel" title="pages_app.models.base.TimestampedModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimestampedModel</span></code></a></p>
+<p>Represents a reusable content block in the CMS.</p>
+<p>Each block can be assigned to multiple pages through PageBlock relationships.
+Content is rendered using a specified template, with optional image attachment.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pages_app.models.block.Block.name" title="Link to this definition"></a></dt>
+<dd><p>Unique identifier for the block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.template">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#pages_app.models.block.Block.template" title="Link to this definition"></a></dt>
+<dd><p>Path to the template used for rendering</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.content">
+<span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#pages_app.models.block.Block.content" title="Link to this definition"></a></dt>
+<dd><p>Main content of the block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>text</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.sorting">
+<span class="sig-name descname"><span class="pre">sorting</span></span><a class="headerlink" href="#pages_app.models.block.Block.sorting" title="Link to this definition"></a></dt>
+<dd><p>Position in page layout</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.image">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#pages_app.models.block.Block.image" title="Link to this definition"></a></dt>
+<dd><p>Optional associated image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ImageField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.history">
+<span class="sig-name descname"><span class="pre">history</span></span><a class="headerlink" href="#pages_app.models.block.Block.history" title="Link to this definition"></a></dt>
+<dd><p>Version tracking</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HistoricalRecords</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">block</span> <span class="o">=</span> <span class="n">Block</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;header&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">template</span><span class="o">=</span><span class="s1">&#39;blocks/header.html&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Welcome to our site&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#pages_app.models.block.Block.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#pages_app.models.block.Block.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#pages_app.models.block.Block.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.get_image_url">
+<span class="sig-name descname"><span class="pre">get_image_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/block.html#Block.get_image_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.block.Block.get_image_url" title="Link to this definition"></a></dt>
+<dd><p>Get the URL of the attached image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Image URL if exists, empty string otherwise</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.block.Block.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.block.Block.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.block.Block.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.block.Block.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.HistoryManagerFromHistoricalQuerySet</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pages_app.models.block.Block.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.block.Block.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.pageblock_set">
+<span class="sig-name descname"><span class="pre">pageblock_set</span></span><a class="headerlink" href="#pages_app.models.block.Block.pageblock_set" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.save_without_historical_record">
+<span class="sig-name descname"><span class="pre">save_without_historical_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.block.Block.save_without_historical_record" title="Link to this definition"></a></dt>
+<dd><p>Save model without saving a historical record</p>
+<p>Make sure you know what you’re doing before you use this method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">sorting</span></span><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.block.Block.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#pages_app.models.block.Block.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pages_app.models.menu_item">
+<span id="pages-app-models-menu-item-module"></span><h2>pages_app.models.menu_item module<a class="headerlink" href="#module-pages_app.models.menu_item" title="Link to this heading"></a></h2>
+<p>MenuItem Model Module</p>
+<p>This module defines the MenuItem model which represents navigation items in the CMS.
+MenuItems are linked to pages and can be sorted.</p>
+<dl class="simple">
+<dt>Key Features:</dt><dd><ul class="simple">
+<li><p>Linked to pages</p></li>
+<li><p>Template-based content</p></li>
+<li><p>Sorting order</p></li>
+<li><p>Historical tracking</p></li>
+</ul>
+</dd>
+<dt>Dependencies:</dt><dd><ul class="simple">
+<li><p>django.db.models</p></li>
+<li><p>simple_history.models.HistoricalRecords</p></li>
+<li><p>.base.TimestampedModel</p></li>
+<li><p>.page.Page</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.menu_item.</span></span><span class="sig-name descname"><span class="pre">MenuItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/menu_item.html#MenuItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.menu_item.MenuItem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pages_app.models.base.TimestampedModel" title="pages_app.models.base.TimestampedModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimestampedModel</span></code></a></p>
+<p>Represents a navigation item in the CMS.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.page">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.page" title="Link to this definition"></a></dt>
+<dd><p>Reference to the linked page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ForeignKey</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.name" title="Link to this definition"></a></dt>
+<dd><p>Name of the menu item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.template">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.template" title="Link to this definition"></a></dt>
+<dd><p>Template content for the menu item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.sorting">
+<span class="sig-name descname"><span class="pre">sorting</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.sorting" title="Link to this definition"></a></dt>
+<dd><p>Sorting order</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.history">
+<span class="sig-name descname"><span class="pre">history</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.history" title="Link to this definition"></a></dt>
+<dd><p>Tracks changes to the menu item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HistoricalRecords</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">page</span> <span class="o">=</span> <span class="n">Page</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">menu_item</span> <span class="o">=</span> <span class="n">MenuItem</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;&lt;a href=&#39;/home&#39;&gt;Home&lt;/a&gt;&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">sorting</span><span class="o">=</span><span class="mi">1</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.HistoryManagerFromHistoricalQuerySet</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#id8" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#id9" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.page_id">
+<span class="sig-name descname"><span class="pre">page_id</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.page_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.save_without_historical_record">
+<span class="sig-name descname"><span class="pre">save_without_historical_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.save_without_historical_record" title="Link to this definition"></a></dt>
+<dd><p>Save model without saving a historical record</p>
+<p>Make sure you know what you’re doing before you use this method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">sorting</span></span><a class="headerlink" href="#id10" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id11">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#id11" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.menu_item.MenuItem.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#pages_app.models.menu_item.MenuItem.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pages_app.models.page">
+<span id="pages-app-models-page-module"></span><h2>pages_app.models.page module<a class="headerlink" href="#module-pages_app.models.page" title="Link to this heading"></a></h2>
+<p>Page Model Module</p>
+<p>Core content model for the CMS that handles multilingual page content.
+Implements caching, SEO optimization, and version control.</p>
+<dl class="simple">
+<dt>Key Features:</dt><dd><ul class="simple">
+<li><p>Multilingual content (EN/DE)</p></li>
+<li><p>SEO metadata management</p></li>
+<li><p>Publication workflow</p></li>
+<li><p>Cache integration</p></li>
+<li><p>Historical tracking</p></li>
+</ul>
+</dd>
+<dt>Dependencies:</dt><dd><ul class="simple">
+<li><p>django.db.models</p></li>
+<li><p>simple_history.models.HistoricalRecords</p></li>
+<li><p>django.core.exceptions.ValidationError</p></li>
+<li><p>django.utils.timezone</p></li>
+<li><p>.base.TimestampedModel</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.page.Page">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.page.</span></span><span class="sig-name descname"><span class="pre">Page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.page.Page" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pages_app.models.base.TimestampedModel" title="pages_app.models.base.TimestampedModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimestampedModel</span></code></a></p>
+<p>Represents a dynamic page in the CMS.
+Inherits from TimestampedModel for automatic timestamp tracking.</p>
+<dl class="simple">
+<dt>Fields:</dt><dd><p>title (str): Page title
+url_path (str): URL path for the page
+name (str): Page identifier, max 100 chars
+language (str): Language code (EN/DE)
+meta_description (str): SEO meta description
+meta_keywords (str): SEO meta keywords
+published_at (datetime): When the page was published
+history (HistoricalRecords): Version tracking</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">page</span> <span class="o">=</span> <span class="n">Page</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Homepage&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">url_path</span><span class="o">=</span><span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Homepage&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">language</span><span class="o">=</span><span class="s2">&quot;EN&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">page</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#pages_app.models.page.Page.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.LANGUAGE_CHOICES">
+<span class="sig-name descname"><span class="pre">LANGUAGE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('EN',</span> <span class="pre">'English'),</span> <span class="pre">('DE',</span> <span class="pre">'Deutsch')]</span></em><a class="headerlink" href="#pages_app.models.page.Page.LANGUAGE_CHOICES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#pages_app.models.page.Page.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.page.Page.clean" title="Link to this definition"></a></dt>
+<dd><p>Custom model validation.
+Ensures URL path starts with a forward slash.
+:raises ValidationError: If URL path is invalid</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#pages_app.models.page.Page.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.get_language_display">
+<span class="sig-name descname"><span class="pre">get_language_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">language&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.page.Page.get_language_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.page.Page.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.page.Page.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.page.Page.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.page.Page.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.history">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.HistoryManagerFromHistoricalQuerySet</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.page.Page.history" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pages_app.models.page.Page.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.is_published">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_published</span></span><a class="headerlink" href="#pages_app.models.page.Page.is_published" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.language">
+<span class="sig-name descname"><span class="pre">language</span></span><a class="headerlink" href="#pages_app.models.page.Page.language" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.menuitem_set">
+<span class="sig-name descname"><span class="pre">menuitem_set</span></span><a class="headerlink" href="#pages_app.models.page.Page.menuitem_set" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.meta_description">
+<span class="sig-name descname"><span class="pre">meta_description</span></span><a class="headerlink" href="#pages_app.models.page.Page.meta_description" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.meta_keywords">
+<span class="sig-name descname"><span class="pre">meta_keywords</span></span><a class="headerlink" href="#pages_app.models.page.Page.meta_keywords" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pages_app.models.page.Page.name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.page.Page.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.pageblock_set">
+<span class="sig-name descname"><span class="pre">pageblock_set</span></span><a class="headerlink" href="#pages_app.models.page.Page.pageblock_set" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.publish">
+<span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page.publish"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.page.Page.publish" title="Link to this definition"></a></dt>
+<dd><p>Publish the page and set publication timestamp.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.published_at">
+<span class="sig-name descname"><span class="pre">published_at</span></span><a class="headerlink" href="#pages_app.models.page.Page.published_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.page.Page.save" title="Link to this definition"></a></dt>
+<dd><p>Custom save method.
+Ensures URL path is valid before saving.
+Calls full_clean to validate the model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.save_without_historical_record">
+<span class="sig-name descname"><span class="pre">save_without_historical_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.page.Page.save_without_historical_record" title="Link to this definition"></a></dt>
+<dd><p>Save model without saving a historical record</p>
+<p>Make sure you know what you’re doing before you use this method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#pages_app.models.page.Page.title" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.unpublish">
+<span class="sig-name descname"><span class="pre">unpublish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page.unpublish"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.page.Page.unpublish" title="Link to this definition"></a></dt>
+<dd><p>Unpublish the page and clear publication timestamp.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#pages_app.models.page.Page.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page.Page.url_path">
+<span class="sig-name descname"><span class="pre">url_path</span></span><a class="headerlink" href="#pages_app.models.page.Page.url_path" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pages_app.models.page_block">
+<span id="pages-app-models-page-block-module"></span><h2>pages_app.models.page_block module<a class="headerlink" href="#module-pages_app.models.page_block" title="Link to this heading"></a></h2>
+<p>PageBlock Model Module</p>
+<p>Manages the relationship between Pages and Blocks in the CMS.
+Provides ordering and positioning of blocks within pages.</p>
+<dl class="simple">
+<dt>Key Features:</dt><dd><ul class="simple">
+<li><p>Many-to-many relationship handler</p></li>
+<li><p>Block ordering within pages</p></li>
+<li><p>Historical tracking</p></li>
+<li><p>Automatic timestamp management</p></li>
+</ul>
+</dd>
+<dt>Dependencies:</dt><dd><ul class="simple">
+<li><p>django.db.models</p></li>
+<li><p>simple_history.models.HistoricalRecords</p></li>
+<li><p>.page.Page</p></li>
+<li><p>.block.Block</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.page_block.</span></span><span class="sig-name descname"><span class="pre">PageBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page_block.html#PageBlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.page_block.PageBlock" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Associates blocks with pages and manages their positioning.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.page">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.page" title="Link to this definition"></a></dt>
+<dd><p>Reference to the parent page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ForeignKey</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.block">
+<span class="sig-name descname"><span class="pre">block</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.block" title="Link to this definition"></a></dt>
+<dd><p>Reference to the content block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ForeignKey</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.position">
+<span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.position" title="Link to this definition"></a></dt>
+<dd><p>Order position within the page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>IntegerField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.history">
+<span class="sig-name descname"><span class="pre">history</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.history" title="Link to this definition"></a></dt>
+<dd><p>Tracks changes to assignments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HistoricalRecords</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">header</span> <span class="o">=</span> <span class="n">Block</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Header&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">home_page</span> <span class="o">=</span> <span class="n">Page</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">page_block</span> <span class="o">=</span> <span class="n">PageBlock</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">page</span><span class="o">=</span><span class="n">home_page</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">block</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">position</span><span class="o">=</span><span class="mi">1</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id12">
+<span class="sig-name descname"><span class="pre">block</span></span><a class="headerlink" href="#id12" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.block_id">
+<span class="sig-name descname"><span class="pre">block_id</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.block_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id13">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.HistoryManagerFromHistoricalQuerySet</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#id13" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.page_block.PageBlock.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id14">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#id14" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.page_id">
+<span class="sig-name descname"><span class="pre">page_id</span></span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.page_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.page_block.PageBlock.save_without_historical_record">
+<span class="sig-name descname"><span class="pre">save_without_historical_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.page_block.PageBlock.save_without_historical_record" title="Link to this definition"></a></dt>
+<dd><p>Save model without saving a historical record</p>
+<p>Make sure you know what you’re doing before you use this method.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pages_app.models.signals">
+<span id="pages-app-models-signals-module"></span><h2>pages_app.models.signals module<a class="headerlink" href="#module-pages_app.models.signals" title="Link to this heading"></a></h2>
+<p>Signals Module</p>
+<p>Handles automatic cache invalidation when model instances are modified.
+Implements Django’s signal system to maintain cache consistency.</p>
+<dl class="simple">
+<dt>Key Features:</dt><dd><ul class="simple">
+<li><p>Automatic cache clearing on model changes</p></li>
+<li><p>Monitors Block, MenuItem, and PageBlock models</p></li>
+<li><p>Uses post_save and post_delete signals</p></li>
+<li><p>Full cache invalidation strategy</p></li>
+</ul>
+</dd>
+<dt>Dependencies:</dt><dd><ul class="simple">
+<li><p>django.db.models.signals # a module that defines signals and receivers</p></li>
+<li><p>django.dispatch.receiver # a decorator that connects a signal receiver function to a signal</p></li>
+<li><p>django.core.cache # a module that provides a cache system for Django applications</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pages_app.models.signals.invalidate_cache">
+<span class="sig-prename descclassname"><span class="pre">pages_app.models.signals.</span></span><span class="sig-name descname"><span class="pre">invalidate_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/signals.html#invalidate_cache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.signals.invalidate_cache" title="Link to this definition"></a></dt>
+<dd><p>Signal handler that invalidates cache when monitored models change.</p>
+<p>Automatically triggered after save or delete operations on:
+- Block model
+- MenuItem model
+- PageBlock model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sender</strong> – The model class that triggered the signal</p></li>
+<li><p><strong>**kwargs</strong> – Signal parameters including:
+- instance: The actual model instance
+- created: Boolean, True if new instance (post_save only)
+- using: Database alias</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>When a Block is updated:
+&gt;&gt;&gt; block = Block.objects.first()
+&gt;&gt;&gt; block.save()  # Triggers cache invalidation</p>
+</dd></dl>
+
+</section>
+<section id="module-pages_app.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pages_app.models" title="Link to this heading"></a></h2>
+<section id="pages-app-models-module">
+<h3>Pages App Models Module<a class="headerlink" href="#pages-app-models-module" title="Link to this heading"></a></h3>
+<p>This module initializes and exports the core models for the RIS CMS.
+The models work together to create a flexible, multi-language content management system.</p>
+<section id="models">
+<h4>Models<a class="headerlink" href="#models" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Page: Core content model supporting multi-language pages with meta information</p></li>
+<li><p>Block: Reusable content blocks that can be assigned to pages</p></li>
+<li><p>MenuItem: Navigation elements linked to pages</p></li>
+<li><p>PageBlock: Junction model managing page-block relationships</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All models use Django’s ORM and follow the MTV (Model-Template-View) pattern.
+Performance is optimized through proper database indexing and Redis caching.</p>
+</div>
+</section>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.Block">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.</span></span><span class="sig-name descname"><span class="pre">Block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/block.html#Block"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.Block" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pages_app.models.base.TimestampedModel" title="pages_app.models.base.TimestampedModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimestampedModel</span></code></a></p>
+<p>Represents a reusable content block in the CMS.</p>
+<p>Each block can be assigned to multiple pages through PageBlock relationships.
+Content is rendered using a specified template, with optional image attachment.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pages_app.models.Block.name" title="Link to this definition"></a></dt>
+<dd><p>Unique identifier for the block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.template">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#pages_app.models.Block.template" title="Link to this definition"></a></dt>
+<dd><p>Path to the template used for rendering</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.content">
+<span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#pages_app.models.Block.content" title="Link to this definition"></a></dt>
+<dd><p>Main content of the block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>text</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.sorting">
+<span class="sig-name descname"><span class="pre">sorting</span></span><a class="headerlink" href="#pages_app.models.Block.sorting" title="Link to this definition"></a></dt>
+<dd><p>Position in page layout</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.image">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#pages_app.models.Block.image" title="Link to this definition"></a></dt>
+<dd><p>Optional associated image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ImageField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.history">
+<span class="sig-name descname"><span class="pre">history</span></span><a class="headerlink" href="#pages_app.models.Block.history" title="Link to this definition"></a></dt>
+<dd><p>Version tracking</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HistoricalRecords</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">block</span> <span class="o">=</span> <span class="n">Block</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;header&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">template</span><span class="o">=</span><span class="s1">&#39;blocks/header.html&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Welcome to our site&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.Block.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#pages_app.models.Block.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.Block.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#pages_app.models.Block.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#pages_app.models.Block.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Block.get_image_url">
+<span class="sig-name descname"><span class="pre">get_image_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/block.html#Block.get_image_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.Block.get_image_url" title="Link to this definition"></a></dt>
+<dd><p>Get the URL of the attached image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Image URL if exists, empty string otherwise</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Block.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Block.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Block.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Block.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Block.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Block.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Block.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Block.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id15">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.HistoryManagerFromHistoricalQuerySet</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#id15" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pages_app.models.Block.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id16">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#id16" title="Link to this definition"></a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id17">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#id17" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.Block.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.pageblock_set">
+<span class="sig-name descname"><span class="pre">pageblock_set</span></span><a class="headerlink" href="#pages_app.models.Block.pageblock_set" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Block.save_without_historical_record">
+<span class="sig-name descname"><span class="pre">save_without_historical_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Block.save_without_historical_record" title="Link to this definition"></a></dt>
+<dd><p>Save model without saving a historical record</p>
+<p>Make sure you know what you’re doing before you use this method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id18">
+<span class="sig-name descname"><span class="pre">sorting</span></span><a class="headerlink" href="#id18" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id19">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#id19" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Block.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#pages_app.models.Block.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.</span></span><span class="sig-name descname"><span class="pre">MenuItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/menu_item.html#MenuItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.MenuItem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pages_app.models.base.TimestampedModel" title="pages_app.models.base.TimestampedModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimestampedModel</span></code></a></p>
+<p>Represents a navigation item in the CMS.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.page">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#pages_app.models.MenuItem.page" title="Link to this definition"></a></dt>
+<dd><p>Reference to the linked page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ForeignKey</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pages_app.models.MenuItem.name" title="Link to this definition"></a></dt>
+<dd><p>Name of the menu item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.template">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#pages_app.models.MenuItem.template" title="Link to this definition"></a></dt>
+<dd><p>Template content for the menu item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.sorting">
+<span class="sig-name descname"><span class="pre">sorting</span></span><a class="headerlink" href="#pages_app.models.MenuItem.sorting" title="Link to this definition"></a></dt>
+<dd><p>Sorting order</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.history">
+<span class="sig-name descname"><span class="pre">history</span></span><a class="headerlink" href="#pages_app.models.MenuItem.history" title="Link to this definition"></a></dt>
+<dd><p>Tracks changes to the menu item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HistoricalRecords</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">page</span> <span class="o">=</span> <span class="n">Page</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">menu_item</span> <span class="o">=</span> <span class="n">MenuItem</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;&lt;a href=&#39;/home&#39;&gt;Home&lt;/a&gt;&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">sorting</span><span class="o">=</span><span class="mi">1</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#pages_app.models.MenuItem.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#pages_app.models.MenuItem.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#pages_app.models.MenuItem.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.MenuItem.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.MenuItem.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.MenuItem.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.MenuItem.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id20">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.HistoryManagerFromHistoricalQuerySet</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#id20" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pages_app.models.MenuItem.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id21">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#id21" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.MenuItem.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id22">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#id22" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.page_id">
+<span class="sig-name descname"><span class="pre">page_id</span></span><a class="headerlink" href="#pages_app.models.MenuItem.page_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.save_without_historical_record">
+<span class="sig-name descname"><span class="pre">save_without_historical_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.MenuItem.save_without_historical_record" title="Link to this definition"></a></dt>
+<dd><p>Save model without saving a historical record</p>
+<p>Make sure you know what you’re doing before you use this method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id23">
+<span class="sig-name descname"><span class="pre">sorting</span></span><a class="headerlink" href="#id23" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id24">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#id24" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.MenuItem.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#pages_app.models.MenuItem.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.Page">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.</span></span><span class="sig-name descname"><span class="pre">Page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.Page" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pages_app.models.base.TimestampedModel" title="pages_app.models.base.TimestampedModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimestampedModel</span></code></a></p>
+<p>Represents a dynamic page in the CMS.
+Inherits from TimestampedModel for automatic timestamp tracking.</p>
+<dl class="simple">
+<dt>Fields:</dt><dd><p>title (str): Page title
+url_path (str): URL path for the page
+name (str): Page identifier, max 100 chars
+language (str): Language code (EN/DE)
+meta_description (str): SEO meta description
+meta_keywords (str): SEO meta keywords
+published_at (datetime): When the page was published
+history (HistoricalRecords): Version tracking</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">page</span> <span class="o">=</span> <span class="n">Page</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Homepage&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">url_path</span><span class="o">=</span><span class="s2">&quot;/home&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Homepage&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">language</span><span class="o">=</span><span class="s2">&quot;EN&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">page</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.Page.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#pages_app.models.Page.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.LANGUAGE_CHOICES">
+<span class="sig-name descname"><span class="pre">LANGUAGE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('EN',</span> <span class="pre">'English'),</span> <span class="pre">('DE',</span> <span class="pre">'Deutsch')]</span></em><a class="headerlink" href="#pages_app.models.Page.LANGUAGE_CHOICES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.Page.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#pages_app.models.Page.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.Page.clean" title="Link to this definition"></a></dt>
+<dd><p>Custom model validation.
+Ensures URL path starts with a forward slash.
+:raises ValidationError: If URL path is invalid</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#pages_app.models.Page.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.get_language_display">
+<span class="sig-name descname"><span class="pre">get_language_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">language&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Page.get_language_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Page.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Page.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Page.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Page.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.history">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.HistoryManagerFromHistoricalQuerySet</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.Page.history" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pages_app.models.Page.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pages_app.models.Page.is_published">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_published</span></span><a class="headerlink" href="#pages_app.models.Page.is_published" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.language">
+<span class="sig-name descname"><span class="pre">language</span></span><a class="headerlink" href="#pages_app.models.Page.language" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.menuitem_set">
+<span class="sig-name descname"><span class="pre">menuitem_set</span></span><a class="headerlink" href="#pages_app.models.Page.menuitem_set" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.meta_description">
+<span class="sig-name descname"><span class="pre">meta_description</span></span><a class="headerlink" href="#pages_app.models.Page.meta_description" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.meta_keywords">
+<span class="sig-name descname"><span class="pre">meta_keywords</span></span><a class="headerlink" href="#pages_app.models.Page.meta_keywords" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pages_app.models.Page.name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.Page.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.pageblock_set">
+<span class="sig-name descname"><span class="pre">pageblock_set</span></span><a class="headerlink" href="#pages_app.models.Page.pageblock_set" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.publish">
+<span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page.publish"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.Page.publish" title="Link to this definition"></a></dt>
+<dd><p>Publish the page and set publication timestamp.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.published_at">
+<span class="sig-name descname"><span class="pre">published_at</span></span><a class="headerlink" href="#pages_app.models.Page.published_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.Page.save" title="Link to this definition"></a></dt>
+<dd><p>Custom save method.
+Ensures URL path is valid before saving.
+Calls full_clean to validate the model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.save_without_historical_record">
+<span class="sig-name descname"><span class="pre">save_without_historical_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.Page.save_without_historical_record" title="Link to this definition"></a></dt>
+<dd><p>Save model without saving a historical record</p>
+<p>Make sure you know what you’re doing before you use this method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#pages_app.models.Page.title" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.Page.unpublish">
+<span class="sig-name descname"><span class="pre">unpublish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page.html#Page.unpublish"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.Page.unpublish" title="Link to this definition"></a></dt>
+<dd><p>Unpublish the page and clear publication timestamp.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#pages_app.models.Page.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.Page.url_path">
+<span class="sig-name descname"><span class="pre">url_path</span></span><a class="headerlink" href="#pages_app.models.Page.url_path" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.models.</span></span><span class="sig-name descname"><span class="pre">PageBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/models/page_block.html#PageBlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.models.PageBlock" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Associates blocks with pages and manages their positioning.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.page">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#pages_app.models.PageBlock.page" title="Link to this definition"></a></dt>
+<dd><p>Reference to the parent page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ForeignKey</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.block">
+<span class="sig-name descname"><span class="pre">block</span></span><a class="headerlink" href="#pages_app.models.PageBlock.block" title="Link to this definition"></a></dt>
+<dd><p>Reference to the content block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ForeignKey</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.position">
+<span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pages_app.models.PageBlock.position" title="Link to this definition"></a></dt>
+<dd><p>Order position within the page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>IntegerField</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.history">
+<span class="sig-name descname"><span class="pre">history</span></span><a class="headerlink" href="#pages_app.models.PageBlock.history" title="Link to this definition"></a></dt>
+<dd><p>Tracks changes to assignments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HistoricalRecords</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">header</span> <span class="o">=</span> <span class="n">Block</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Header&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">home_page</span> <span class="o">=</span> <span class="n">Page</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">page_block</span> <span class="o">=</span> <span class="n">PageBlock</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">page</span><span class="o">=</span><span class="n">home_page</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">block</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">position</span><span class="o">=</span><span class="mi">1</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#pages_app.models.PageBlock.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#pages_app.models.PageBlock.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id25">
+<span class="sig-name descname"><span class="pre">block</span></span><a class="headerlink" href="#id25" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.block_id">
+<span class="sig-name descname"><span class="pre">block_id</span></span><a class="headerlink" href="#pages_app.models.PageBlock.block_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id26">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.HistoryManagerFromHistoricalQuerySet</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#id26" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#pages_app.models.PageBlock.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pages_app.models.PageBlock.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id27">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#id27" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.page_id">
+<span class="sig-name descname"><span class="pre">page_id</span></span><a class="headerlink" href="#pages_app.models.PageBlock.page_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.models.PageBlock.save_without_historical_record">
+<span class="sig-name descname"><span class="pre">save_without_historical_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pages_app.models.PageBlock.save_without_historical_record" title="Link to this definition"></a></dt>
+<dd><p>Save model without saving a historical record</p>
+<p>Make sure you know what you’re doing before you use this method.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pages_app.migrations.html" class="btn btn-neutral float-left" title="pages_app.migrations package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pages_app.tests.html" class="btn btn-neutral float-right" title="pages_app.tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maximiliano Santander.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

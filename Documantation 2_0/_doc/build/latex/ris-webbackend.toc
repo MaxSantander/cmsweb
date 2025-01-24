@@ -1,0 +1,120 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Overview}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Features}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Getting Started}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Introduction}{3}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Requirements}{3}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Installation Steps}{3}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Database Setup}{4}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Start Development Server}{4}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Database Schema}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Model Overview}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Model Details}{5}{subsection.2.2.2}%
+\contentsline {subsubsection}{Page Model}{5}{subsubsection*.3}%
+\contentsline {subsubsection}{Block Model}{5}{subsubsection*.4}%
+\contentsline {subsubsection}{MenuItem Model}{6}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {2.2.3}Key Features}{6}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Views Documentation}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Overview}{6}{subsection.2.3.1}%
+\contentsline {subsubsection}{Home View Documentation}{6}{subsubsection*.6}%
+\contentsline {paragraph}{Overview}{6}{paragraph*.7}%
+\contentsline {paragraph}{Key Functions}{6}{paragraph*.8}%
+\contentsline {subparagraph}{render\_page}{6}{subparagraph*.9}%
+\contentsline {paragraph}{Cache Implementation}{7}{paragraph*.11}%
+\contentsline {paragraph}{Dependencies}{7}{paragraph*.12}%
+\contentsline {paragraph}{Models Used}{7}{paragraph*.13}%
+\contentsline {paragraph}{Configuration}{7}{paragraph*.14}%
+\contentsline {subsubsection}{Page Views Documentation}{8}{subsubsection*.15}%
+\contentsline {paragraph}{Overview}{8}{paragraph*.16}%
+\contentsline {paragraph}{Key Components}{8}{paragraph*.17}%
+\contentsline {subparagraph}{Page Rendering}{8}{subparagraph*.18}%
+\contentsline {subparagraph}{Page Model Integration}{8}{subparagraph*.20}%
+\contentsline {paragraph}{Cache Configuration}{9}{paragraph*.21}%
+\contentsline {paragraph}{Dependencies}{9}{paragraph*.22}%
+\contentsline {subsection}{\numberline {2.3.2}Home View}{9}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Page View}{9}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Deployment}{9}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Overview}{9}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Deployment Steps}{9}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Example Configuration}{10}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}API Documentation}{10}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Overview}{10}{subsection.2.5.1}%
+\contentsline {subsubsection}{API Endpoints}{10}{subsubsection*.23}%
+\contentsline {paragraph}{Overview}{10}{paragraph*.24}%
+\contentsline {paragraph}{Core Endpoints}{10}{paragraph*.25}%
+\contentsline {subparagraph}{Page Management}{10}{subparagraph*.26}%
+\contentsline {subparagraph}{Block Management}{10}{subparagraph*.27}%
+\contentsline {subsubsection}{Authentication}{11}{subsubsection*.28}%
+\contentsline {paragraph}{Overview}{11}{paragraph*.29}%
+\contentsline {paragraph}{Authentication Methods}{11}{paragraph*.30}%
+\contentsline {paragraph}{Security Configuration}{11}{paragraph*.31}%
+\contentsline {subsubsection}{Examples}{11}{subsubsection*.32}%
+\contentsline {paragraph}{API Usage Examples}{11}{paragraph*.33}%
+\contentsline {subparagraph}{Page Creation}{11}{subparagraph*.34}%
+\contentsline {subparagraph}{Block Management}{11}{subparagraph*.35}%
+\contentsline {subparagraph}{Cache Operations}{12}{subparagraph*.36}%
+\contentsline {subsection}{\numberline {2.5.2}Authentication}{12}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Endpoints}{12}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Examples}{12}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Modules}{12}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}pages\_app package}{12}{subsection.2.6.1}%
+\contentsline {subsubsection}{Subpackages}{12}{subsubsection*.37}%
+\contentsline {paragraph}{pages\_app.migrations package}{12}{paragraph*.38}%
+\contentsline {subparagraph}{Submodules}{12}{subparagraph*.39}%
+\contentsline {subparagraph}{pages\_app.migrations.0001\_initial module}{12}{subparagraph*.40}%
+\contentsline {subparagraph}{pages\_app.migrations.0002\_menuitem\_name module}{13}{subparagraph*.45}%
+\contentsline {subparagraph}{pages\_app.migrations.0003\_block\_name\_page\_name module}{13}{subparagraph*.49}%
+\contentsline {subparagraph}{pages\_app.migrations.0004\_alter\_block\_name module}{14}{subparagraph*.53}%
+\contentsline {subparagraph}{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more module}{14}{subparagraph*.57}%
+\contentsline {subparagraph}{pages\_app.migrations.0006\_block\_image\_historicalblock\_image module}{16}{subparagraph*.61}%
+\contentsline {subparagraph}{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more module}{16}{subparagraph*.65}%
+\contentsline {subparagraph}{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more module}{16}{subparagraph*.69}%
+\contentsline {subparagraph}{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more module}{16}{subparagraph*.73}%
+\contentsline {subparagraph}{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more module}{17}{subparagraph*.77}%
+\contentsline {subparagraph}{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more module}{17}{subparagraph*.81}%
+\contentsline {subparagraph}{pages\_app.migrations.0012\_block\_script\_historicalblock\_script module}{17}{subparagraph*.85}%
+\contentsline {subparagraph}{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script module}{18}{subparagraph*.89}%
+\contentsline {subparagraph}{Module contents}{18}{subparagraph*.93}%
+\contentsline {paragraph}{pages\_app.models package}{18}{paragraph*.94}%
+\contentsline {subparagraph}{Submodules}{18}{subparagraph*.95}%
+\contentsline {subparagraph}{pages\_app.models.base module}{18}{subparagraph*.96}%
+\contentsline {subparagraph}{pages\_app.models.block module}{19}{subparagraph*.110}%
+\contentsline {subparagraph}{pages\_app.models.menu\_item module}{22}{subparagraph*.140}%
+\contentsline {subparagraph}{pages\_app.models.page module}{24}{subparagraph*.164}%
+\contentsline {subparagraph}{pages\_app.models.page\_block module}{28}{subparagraph*.209}%
+\contentsline {subparagraph}{pages\_app.models.signals module}{30}{subparagraph*.225}%
+\contentsline {subparagraph}{Module contents}{30}{subparagraph*.227}%
+\contentsline {subparagraph}{Pages App Models Module}{30}{subparagraph*.228}%
+\contentsline {subparagraph}{Models}{30}{subparagraph*.229}%
+\contentsline {paragraph}{pages\_app.tests package}{39}{paragraph*.330}%
+\contentsline {subparagraph}{Submodules}{39}{subparagraph*.331}%
+\contentsline {subparagraph}{pages\_app.tests.test\_cache module}{39}{subparagraph*.332}%
+\contentsline {subparagraph}{Cache Tests Module}{39}{subparagraph*.333}%
+\contentsline {subparagraph}{Test Cases}{39}{subparagraph*.334}%
+\contentsline {subparagraph}{Dependencies}{40}{subparagraph*.335}%
+\contentsline {subparagraph}{pages\_app.tests.test\_models module}{41}{subparagraph*.343}%
+\contentsline {subparagraph}{pages\_app.tests.test\_views module}{46}{subparagraph*.368}%
+\contentsline {subparagraph}{Module contents}{46}{subparagraph*.376}%
+\contentsline {subparagraph}{Test Suite for RIS CMS}{46}{subparagraph*.377}%
+\contentsline {subparagraph}{Test Modules}{46}{subparagraph*.378}%
+\contentsline {subparagraph}{Test Configuration}{46}{subparagraph*.379}%
+\contentsline {paragraph}{pages\_app.views package}{47}{paragraph*.380}%
+\contentsline {subparagraph}{Submodules}{47}{subparagraph*.381}%
+\contentsline {subparagraph}{pages\_app.views.home module}{47}{subparagraph*.382}%
+\contentsline {subparagraph}{pages\_app.views.page module}{47}{subparagraph*.384}%
+\contentsline {subparagraph}{Module contents}{48}{subparagraph*.386}%
+\contentsline {subparagraph}{Pages App Views Module}{48}{subparagraph*.387}%
+\contentsline {subsubsection}{Submodules}{49}{subsubsection*.389}%
+\contentsline {subsubsection}{pages\_app.admin module}{49}{subsubsection*.390}%
+\contentsline {subsubsection}{pages\_app.apps module}{50}{subsubsection*.412}%
+\contentsline {subsubsection}{pages\_app.urls module}{50}{subsubsection*.417}%
+\contentsline {paragraph}{URL Patterns:}{51}{paragraph*.418}%
+\contentsline {paragraph}{Pattern Matching:}{51}{paragraph*.419}%
+\contentsline {paragraph}{Example Usage:}{51}{paragraph*.420}%
+\contentsline {paragraph}{See Also:}{51}{paragraph*.421}%
+\contentsline {subsubsection}{pages\_app.views module}{51}{subsubsection*.422}%
+\contentsline {paragraph}{Pages App Views Module}{51}{paragraph*.423}%
+\contentsline {subsubsection}{Module contents}{52}{subsubsection*.425}%
+\contentsline {chapter}{\numberline {3}Indices and Tables}{53}{chapter.3}%
+\contentsline {chapter}{Python Module Index}{55}{section*.428}%
+\contentsline {chapter}{Index}{57}{section*.429}%

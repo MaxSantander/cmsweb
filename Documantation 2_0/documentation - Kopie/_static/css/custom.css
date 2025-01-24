@@ -1,0 +1,39 @@
+.wy-side-nav-search {
+    background-color: #2980B9;
+}
+
+.wy-nav-content {
+    max-width: 1200px !important;
+}
+.wy-nav-side {
+    background: #343131;
+}
+
+.rst-content .note {
+    background: #eee;
+}
+
+@media screen and (max-width: 768px) {
+    .wy-nav-side {
+        left: -300px;
+    }
+    .wy-nav-content-wrap {
+        margin-left: 0;
+    }
+    .wy-nav-content {
+        padding: 1.68px;
+    }
+    .wy-table-responsive table td {
+        white-space: normal !important;
+    }
+    
+    .wy-table-responsive {
+        overflow: visible !important;
+    }
+}
+
+/* Typography improvements */
+.rst-content {
+    font-size: 16px;
+    line-height: 1.6;
+}

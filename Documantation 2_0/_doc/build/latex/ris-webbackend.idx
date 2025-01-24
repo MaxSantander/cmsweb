@@ -1,0 +1,406 @@
+\indexentry{module@\spxentry{module}!pages\_app.views.home@\spxentry{pages\_app.views.home}|hyperpage}{6}
+\indexentry{pages\_app.views.home@\spxentry{pages\_app.views.home}!module@\spxentry{module}|hyperpage}{6}
+\indexentry{render\_page() (in module pages\_app.views.home)@\spxentry{render\_page()}\spxextra{in module pages\_app.views.home}|hyperpage}{6}
+\indexentry{module@\spxentry{module}!pages\_app.views.page@\spxentry{pages\_app.views.page}|hyperpage}{8}
+\indexentry{pages\_app.views.page@\spxentry{pages\_app.views.page}!module@\spxentry{module}|hyperpage}{8}
+\indexentry{render\_page() (in module pages\_app.views.home)@\spxentry{render\_page()}\spxextra{in module pages\_app.views.home}|hyperpage}{8}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0001\_initial@\spxentry{pages\_app.migrations.0001\_initial}|hyperpage}{12}
+\indexentry{pages\_app.migrations.0001\_initial@\spxentry{pages\_app.migrations.0001\_initial}!module@\spxentry{module}|hyperpage}{12}
+\indexentry{Migration (class in pages\_app.migrations.0001\_initial)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0001\_initial}|hyperpage}{12}
+\indexentry{dependencies (pages\_app.migrations.0001\_initial.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0001\_initial.Migration attribute}|hyperpage}{12}
+\indexentry{initial (pages\_app.migrations.0001\_initial.Migration attribute)@\spxentry{initial}\spxextra{pages\_app.migrations.0001\_initial.Migration attribute}|hyperpage}{12}
+\indexentry{operations (pages\_app.migrations.0001\_initial.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0001\_initial.Migration attribute}|hyperpage}{12}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0002\_menuitem\_name@\spxentry{pages\_app.migrations.0002\_menuitem\_name}|hyperpage}{13}
+\indexentry{pages\_app.migrations.0002\_menuitem\_name@\spxentry{pages\_app.migrations.0002\_menuitem\_name}!module@\spxentry{module}|hyperpage}{13}
+\indexentry{Migration (class in pages\_app.migrations.0002\_menuitem\_name)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0002\_menuitem\_name}|hyperpage}{13}
+\indexentry{dependencies (pages\_app.migrations.0002\_menuitem\_name.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0002\_menuitem\_name.Migration attribute}|hyperpage}{13}
+\indexentry{operations (pages\_app.migrations.0002\_menuitem\_name.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0002\_menuitem\_name.Migration attribute}|hyperpage}{13}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0003\_block\_name\_page\_name@\spxentry{pages\_app.migrations.0003\_block\_name\_page\_name}|hyperpage}{13}
+\indexentry{pages\_app.migrations.0003\_block\_name\_page\_name@\spxentry{pages\_app.migrations.0003\_block\_name\_page\_name}!module@\spxentry{module}|hyperpage}{13}
+\indexentry{Migration (class in pages\_app.migrations.0003\_block\_name\_page\_name)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0003\_block\_name\_page\_name}|hyperpage}{13}
+\indexentry{dependencies (pages\_app.migrations.0003\_block\_name\_page\_name.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0003\_block\_name\_page\_name.Migration attribute}|hyperpage}{13}
+\indexentry{operations (pages\_app.migrations.0003\_block\_name\_page\_name.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0003\_block\_name\_page\_name.Migration attribute}|hyperpage}{13}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0004\_alter\_block\_name@\spxentry{pages\_app.migrations.0004\_alter\_block\_name}|hyperpage}{14}
+\indexentry{pages\_app.migrations.0004\_alter\_block\_name@\spxentry{pages\_app.migrations.0004\_alter\_block\_name}!module@\spxentry{module}|hyperpage}{14}
+\indexentry{Migration (class in pages\_app.migrations.0004\_alter\_block\_name)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0004\_alter\_block\_name}|hyperpage}{14}
+\indexentry{dependencies (pages\_app.migrations.0004\_alter\_block\_name.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0004\_alter\_block\_name.Migration attribute}|hyperpage}{14}
+\indexentry{operations (pages\_app.migrations.0004\_alter\_block\_name.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0004\_alter\_block\_name.Migration attribute}|hyperpage}{14}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more@\spxentry{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more}|hyperpage}{14}
+\indexentry{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more@\spxentry{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more}!module@\spxentry{module}|hyperpage}{14}
+\indexentry{Migration (class in pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more}|hyperpage}{14}
+\indexentry{dependencies (pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more.Migration attribute}|hyperpage}{14}
+\indexentry{operations (pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more.Migration attribute}|hyperpage}{14}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0006\_block\_image\_historicalblock\_image@\spxentry{pages\_app.migrations.0006\_block\_image\_historicalblock\_image}|hyperpage}{16}
+\indexentry{pages\_app.migrations.0006\_block\_image\_historicalblock\_image@\spxentry{pages\_app.migrations.0006\_block\_image\_historicalblock\_image}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{Migration (class in pages\_app.migrations.0006\_block\_image\_historicalblock\_image)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0006\_block\_image\_historicalblock\_image}|hyperpage}{16}
+\indexentry{dependencies (pages\_app.migrations.0006\_block\_image\_historicalblock\_image.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0006\_block\_image\_historicalblock\_image.Migration attribute}|hyperpage}{16}
+\indexentry{operations (pages\_app.migrations.0006\_block\_image\_historicalblock\_image.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0006\_block\_image\_historicalblock\_image.Migration attribute}|hyperpage}{16}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more@\spxentry{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}|hyperpage}{16}
+\indexentry{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more@\spxentry{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{Migration (class in pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}|hyperpage}{16}
+\indexentry{dependencies (pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}|hyperpage}{16}
+\indexentry{operations (pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}|hyperpage}{16}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more@\spxentry{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}|hyperpage}{16}
+\indexentry{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more@\spxentry{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{Migration (class in pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}|hyperpage}{16}
+\indexentry{dependencies (pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute}|hyperpage}{16}
+\indexentry{operations (pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute}|hyperpage}{16}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more@\spxentry{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}|hyperpage}{16}
+\indexentry{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more@\spxentry{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{Migration (class in pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}|hyperpage}{16}
+\indexentry{dependencies (pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}|hyperpage}{16}
+\indexentry{operations (pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}|hyperpage}{16}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more@\spxentry{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}|hyperpage}{17}
+\indexentry{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more@\spxentry{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}!module@\spxentry{module}|hyperpage}{17}
+\indexentry{Migration (class in pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}|hyperpage}{17}
+\indexentry{dependencies (pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute}|hyperpage}{17}
+\indexentry{operations (pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute}|hyperpage}{17}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more@\spxentry{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}|hyperpage}{17}
+\indexentry{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more@\spxentry{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}!module@\spxentry{module}|hyperpage}{17}
+\indexentry{Migration (class in pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}|hyperpage}{17}
+\indexentry{dependencies (pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}|hyperpage}{17}
+\indexentry{operations (pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}|hyperpage}{17}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0012\_block\_script\_historicalblock\_script@\spxentry{pages\_app.migrations.0012\_block\_script\_historicalblock\_script}|hyperpage}{17}
+\indexentry{pages\_app.migrations.0012\_block\_script\_historicalblock\_script@\spxentry{pages\_app.migrations.0012\_block\_script\_historicalblock\_script}!module@\spxentry{module}|hyperpage}{17}
+\indexentry{Migration (class in pages\_app.migrations.0012\_block\_script\_historicalblock\_script)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0012\_block\_script\_historicalblock\_script}|hyperpage}{17}
+\indexentry{dependencies (pages\_app.migrations.0012\_block\_script\_historicalblock\_script.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0012\_block\_script\_historicalblock\_script.Migration attribute}|hyperpage}{17}
+\indexentry{operations (pages\_app.migrations.0012\_block\_script\_historicalblock\_script.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0012\_block\_script\_historicalblock\_script.Migration attribute}|hyperpage}{17}
+\indexentry{module@\spxentry{module}!pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script@\spxentry{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script}|hyperpage}{18}
+\indexentry{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script@\spxentry{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script}!module@\spxentry{module}|hyperpage}{18}
+\indexentry{Migration (class in pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script)@\spxentry{Migration}\spxextra{class in pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script}|hyperpage}{18}
+\indexentry{dependencies (pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script.Migration attribute)@\spxentry{dependencies}\spxextra{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script.Migration attribute}|hyperpage}{18}
+\indexentry{operations (pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script.Migration attribute)@\spxentry{operations}\spxextra{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script.Migration attribute}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!pages\_app.migrations@\spxentry{pages\_app.migrations}|hyperpage}{18}
+\indexentry{pages\_app.migrations@\spxentry{pages\_app.migrations}!module@\spxentry{module}|hyperpage}{18}
+\indexentry{module@\spxentry{module}!pages\_app.models.base@\spxentry{pages\_app.models.base}|hyperpage}{18}
+\indexentry{pages\_app.models.base@\spxentry{pages\_app.models.base}!module@\spxentry{module}|hyperpage}{18}
+\indexentry{created\_at (in module pages\_app.models.base)@\spxentry{created\_at}\spxextra{in module pages\_app.models.base}|hyperpage}{18}
+\indexentry{updated\_at (in module pages\_app.models.base)@\spxentry{updated\_at}\spxextra{in module pages\_app.models.base}|hyperpage}{18}
+\indexentry{TimestampedModel (class in pages\_app.models.base)@\spxentry{TimestampedModel}\spxextra{class in pages\_app.models.base}|hyperpage}{18}
+\indexentry{created\_at (pages\_app.models.base.TimestampedModel attribute)@\spxentry{created\_at}\spxextra{pages\_app.models.base.TimestampedModel attribute}|hyperpage}{18}
+\indexentry{updated\_at (pages\_app.models.base.TimestampedModel attribute)@\spxentry{updated\_at}\spxextra{pages\_app.models.base.TimestampedModel attribute}|hyperpage}{18}
+\indexentry{TimestampedModel.Meta (class in pages\_app.models.base)@\spxentry{TimestampedModel.Meta}\spxextra{class in pages\_app.models.base}|hyperpage}{18}
+\indexentry{abstract (pages\_app.models.base.TimestampedModel.Meta attribute)@\spxentry{abstract}\spxextra{pages\_app.models.base.TimestampedModel.Meta attribute}|hyperpage}{19}
+\indexentry{created\_at (pages\_app.models.base.TimestampedModel attribute)@\spxentry{created\_at}\spxextra{pages\_app.models.base.TimestampedModel attribute}|hyperpage}{19}
+\indexentry{get\_next\_by\_created\_at() (pages\_app.models.base.TimestampedModel method)@\spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.base.TimestampedModel method}|hyperpage}{19}
+\indexentry{get\_next\_by\_updated\_at() (pages\_app.models.base.TimestampedModel method)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.base.TimestampedModel method}|hyperpage}{19}
+\indexentry{get\_previous\_by\_created\_at() (pages\_app.models.base.TimestampedModel method)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.base.TimestampedModel method}|hyperpage}{19}
+\indexentry{get\_previous\_by\_updated\_at() (pages\_app.models.base.TimestampedModel method)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.base.TimestampedModel method}|hyperpage}{19}
+\indexentry{updated\_at (pages\_app.models.base.TimestampedModel attribute)@\spxentry{updated\_at}\spxextra{pages\_app.models.base.TimestampedModel attribute}|hyperpage}{19}
+\indexentry{module@\spxentry{module}!pages\_app.models.block@\spxentry{pages\_app.models.block}|hyperpage}{19}
+\indexentry{pages\_app.models.block@\spxentry{pages\_app.models.block}!module@\spxentry{module}|hyperpage}{19}
+\indexentry{name (in module pages\_app.models.block)@\spxentry{name}\spxextra{in module pages\_app.models.block}|hyperpage}{19}
+\indexentry{template (in module pages\_app.models.block)@\spxentry{template}\spxextra{in module pages\_app.models.block}|hyperpage}{19}
+\indexentry{sorting (in module pages\_app.models.block)@\spxentry{sorting}\spxextra{in module pages\_app.models.block}|hyperpage}{19}
+\indexentry{image (in module pages\_app.models.block)@\spxentry{image}\spxextra{in module pages\_app.models.block}|hyperpage}{19}
+\indexentry{Block (class in pages\_app.models.block)@\spxentry{Block}\spxextra{class in pages\_app.models.block}|hyperpage}{19}
+\indexentry{name (pages\_app.models.block.Block attribute)@\spxentry{name}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{20}
+\indexentry{template (pages\_app.models.block.Block attribute)@\spxentry{template}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{20}
+\indexentry{content (pages\_app.models.block.Block attribute)@\spxentry{content}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{20}
+\indexentry{sorting (pages\_app.models.block.Block attribute)@\spxentry{sorting}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{20}
+\indexentry{image (pages\_app.models.block.Block attribute)@\spxentry{image}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{20}
+\indexentry{history (pages\_app.models.block.Block attribute)@\spxentry{history}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{20}
+\indexentry{Block.DoesNotExist@\spxentry{Block.DoesNotExist}|hyperpage}{20}
+\indexentry{Block.MultipleObjectsReturned@\spxentry{Block.MultipleObjectsReturned}|hyperpage}{20}
+\indexentry{created\_at (pages\_app.models.block.Block attribute)@\spxentry{created\_at}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{20}
+\indexentry{get\_image\_url() (pages\_app.models.block.Block method)@\spxentry{get\_image\_url()}\spxextra{pages\_app.models.block.Block method}|hyperpage}{20}
+\indexentry{get\_next\_by\_created\_at() (pages\_app.models.block.Block method)@\spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.block.Block method}|hyperpage}{21}
+\indexentry{get\_next\_by\_updated\_at() (pages\_app.models.block.Block method)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.block.Block method}|hyperpage}{21}
+\indexentry{get\_previous\_by\_created\_at() (pages\_app.models.block.Block method)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.block.Block method}|hyperpage}{21}
+\indexentry{get\_previous\_by\_updated\_at() (pages\_app.models.block.Block method)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.block.Block method}|hyperpage}{21}
+\indexentry{history (pages\_app.models.block.Block attribute)@\spxentry{history}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{21}
+\indexentry{id (pages\_app.models.block.Block attribute)@\spxentry{id}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{21}
+\indexentry{image (pages\_app.models.block.Block attribute)@\spxentry{image}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{21}
+\indexentry{name (pages\_app.models.block.Block attribute)@\spxentry{name}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{21}
+\indexentry{objects (pages\_app.models.block.Block attribute)@\spxentry{objects}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{21}
+\indexentry{pageblock\_set (pages\_app.models.block.Block attribute)@\spxentry{pageblock\_set}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{21}
+\indexentry{save\_without\_historical\_record() (pages\_app.models.block.Block method)@\spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.block.Block method}|hyperpage}{21}
+\indexentry{sorting (pages\_app.models.block.Block attribute)@\spxentry{sorting}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{21}
+\indexentry{template (pages\_app.models.block.Block attribute)@\spxentry{template}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{21}
+\indexentry{updated\_at (pages\_app.models.block.Block attribute)@\spxentry{updated\_at}\spxextra{pages\_app.models.block.Block attribute}|hyperpage}{22}
+\indexentry{module@\spxentry{module}!pages\_app.models.menu\_item@\spxentry{pages\_app.models.menu\_item}|hyperpage}{22}
+\indexentry{pages\_app.models.menu\_item@\spxentry{pages\_app.models.menu\_item}!module@\spxentry{module}|hyperpage}{22}
+\indexentry{MenuItem (class in pages\_app.models.menu\_item)@\spxentry{MenuItem}\spxextra{class in pages\_app.models.menu\_item}|hyperpage}{22}
+\indexentry{page (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{page}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{22}
+\indexentry{name (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{name}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{22}
+\indexentry{template (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{template}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{22}
+\indexentry{sorting (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{sorting}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{22}
+\indexentry{history (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{history}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{22}
+\indexentry{MenuItem.DoesNotExist@\spxentry{MenuItem.DoesNotExist}|hyperpage}{23}
+\indexentry{MenuItem.MultipleObjectsReturned@\spxentry{MenuItem.MultipleObjectsReturned}|hyperpage}{23}
+\indexentry{created\_at (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{created\_at}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{23}
+\indexentry{get\_next\_by\_created\_at() (pages\_app.models.menu\_item.MenuItem method)@\spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.menu\_item.MenuItem method}|hyperpage}{23}
+\indexentry{get\_next\_by\_updated\_at() (pages\_app.models.menu\_item.MenuItem method)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.menu\_item.MenuItem method}|hyperpage}{23}
+\indexentry{get\_previous\_by\_created\_at() (pages\_app.models.menu\_item.MenuItem method)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.menu\_item.MenuItem method}|hyperpage}{23}
+\indexentry{get\_previous\_by\_updated\_at() (pages\_app.models.menu\_item.MenuItem method)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.menu\_item.MenuItem method}|hyperpage}{23}
+\indexentry{history (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{history}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{23}
+\indexentry{id (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{id}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{23}
+\indexentry{name (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{name}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{23}
+\indexentry{objects (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{objects}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{23}
+\indexentry{page (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{page}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{23}
+\indexentry{page\_id (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{page\_id}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{24}
+\indexentry{save\_without\_historical\_record() (pages\_app.models.menu\_item.MenuItem method)@\spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.menu\_item.MenuItem method}|hyperpage}{24}
+\indexentry{sorting (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{sorting}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{24}
+\indexentry{template (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{template}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{24}
+\indexentry{updated\_at (pages\_app.models.menu\_item.MenuItem attribute)@\spxentry{updated\_at}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}|hyperpage}{24}
+\indexentry{module@\spxentry{module}!pages\_app.models.page@\spxentry{pages\_app.models.page}|hyperpage}{24}
+\indexentry{pages\_app.models.page@\spxentry{pages\_app.models.page}!module@\spxentry{module}|hyperpage}{24}
+\indexentry{title (in module pages\_app.models.page)@\spxentry{title}\spxextra{in module pages\_app.models.page}|hyperpage}{24}
+\indexentry{url\_path (in module pages\_app.models.page)@\spxentry{url\_path}\spxextra{in module pages\_app.models.page}|hyperpage}{24}
+\indexentry{name (in module pages\_app.models.page)@\spxentry{name}\spxextra{in module pages\_app.models.page}|hyperpage}{24}
+\indexentry{language (in module pages\_app.models.page)@\spxentry{language}\spxextra{in module pages\_app.models.page}|hyperpage}{24}
+\indexentry{meta\_description (in module pages\_app.models.page)@\spxentry{meta\_description}\spxextra{in module pages\_app.models.page}|hyperpage}{24}
+\indexentry{meta\_keywords (in module pages\_app.models.page)@\spxentry{meta\_keywords}\spxextra{in module pages\_app.models.page}|hyperpage}{24}
+\indexentry{published\_at (in module pages\_app.models.page)@\spxentry{published\_at}\spxextra{in module pages\_app.models.page}|hyperpage}{25}
+\indexentry{Page (class in pages\_app.models.page)@\spxentry{Page}\spxextra{class in pages\_app.models.page}|hyperpage}{25}
+\indexentry{title (pages\_app.models.page.Page attribute)@\spxentry{title}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{25}
+\indexentry{url\_path (pages\_app.models.page.Page attribute)@\spxentry{url\_path}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{25}
+\indexentry{name (pages\_app.models.page.Page attribute)@\spxentry{name}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{25}
+\indexentry{language (pages\_app.models.page.Page attribute)@\spxentry{language}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{25}
+\indexentry{meta\_description (pages\_app.models.page.Page attribute)@\spxentry{meta\_description}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{25}
+\indexentry{meta\_keywords (pages\_app.models.page.Page attribute)@\spxentry{meta\_keywords}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{25}
+\indexentry{published\_at (pages\_app.models.page.Page attribute)@\spxentry{published\_at}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{25}
+\indexentry{history (pages\_app.models.page.Page attribute)@\spxentry{history}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{25}
+\indexentry{Page.DoesNotExist@\spxentry{Page.DoesNotExist}|hyperpage}{26}
+\indexentry{LANGUAGE\_CHOICES (pages\_app.models.page.Page attribute)@\spxentry{LANGUAGE\_CHOICES}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{26}
+\indexentry{Page.MultipleObjectsReturned@\spxentry{Page.MultipleObjectsReturned}|hyperpage}{26}
+\indexentry{clean() (pages\_app.models.page.Page method)@\spxentry{clean()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{26}
+\indexentry{created\_at (pages\_app.models.page.Page attribute)@\spxentry{created\_at}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{26}
+\indexentry{get\_language\_display() (pages\_app.models.page.Page method)@\spxentry{get\_language\_display()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{26}
+\indexentry{get\_next\_by\_created\_at() (pages\_app.models.page.Page method)@\spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{26}
+\indexentry{get\_next\_by\_updated\_at() (pages\_app.models.page.Page method)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{26}
+\indexentry{get\_previous\_by\_created\_at() (pages\_app.models.page.Page method)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{26}
+\indexentry{get\_previous\_by\_updated\_at() (pages\_app.models.page.Page method)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{26}
+\indexentry{history (pages\_app.models.page.Page attribute)@\spxentry{history}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{26}
+\indexentry{id (pages\_app.models.page.Page attribute)@\spxentry{id}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{26}
+\indexentry{is\_published (pages\_app.models.page.Page property)@\spxentry{is\_published}\spxextra{pages\_app.models.page.Page property}|hyperpage}{26}
+\indexentry{language (pages\_app.models.page.Page attribute)@\spxentry{language}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{26}
+\indexentry{menuitem\_set (pages\_app.models.page.Page attribute)@\spxentry{menuitem\_set}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{26}
+\indexentry{meta\_description (pages\_app.models.page.Page attribute)@\spxentry{meta\_description}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{27}
+\indexentry{meta\_keywords (pages\_app.models.page.Page attribute)@\spxentry{meta\_keywords}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{27}
+\indexentry{name (pages\_app.models.page.Page attribute)@\spxentry{name}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{27}
+\indexentry{objects (pages\_app.models.page.Page attribute)@\spxentry{objects}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{27}
+\indexentry{pageblock\_set (pages\_app.models.page.Page attribute)@\spxentry{pageblock\_set}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{27}
+\indexentry{publish() (pages\_app.models.page.Page method)@\spxentry{publish()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{27}
+\indexentry{published\_at (pages\_app.models.page.Page attribute)@\spxentry{published\_at}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{27}
+\indexentry{save() (pages\_app.models.page.Page method)@\spxentry{save()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{27}
+\indexentry{save\_without\_historical\_record() (pages\_app.models.page.Page method)@\spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{27}
+\indexentry{title (pages\_app.models.page.Page attribute)@\spxentry{title}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{27}
+\indexentry{unpublish() (pages\_app.models.page.Page method)@\spxentry{unpublish()}\spxextra{pages\_app.models.page.Page method}|hyperpage}{27}
+\indexentry{updated\_at (pages\_app.models.page.Page attribute)@\spxentry{updated\_at}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{28}
+\indexentry{url\_path (pages\_app.models.page.Page attribute)@\spxentry{url\_path}\spxextra{pages\_app.models.page.Page attribute}|hyperpage}{28}
+\indexentry{module@\spxentry{module}!pages\_app.models.page\_block@\spxentry{pages\_app.models.page\_block}|hyperpage}{28}
+\indexentry{pages\_app.models.page\_block@\spxentry{pages\_app.models.page\_block}!module@\spxentry{module}|hyperpage}{28}
+\indexentry{PageBlock (class in pages\_app.models.page\_block)@\spxentry{PageBlock}\spxextra{class in pages\_app.models.page\_block}|hyperpage}{28}
+\indexentry{page (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{page}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{28}
+\indexentry{block (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{block}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{28}
+\indexentry{position (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{position}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{28}
+\indexentry{history (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{history}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{28}
+\indexentry{PageBlock.DoesNotExist@\spxentry{PageBlock.DoesNotExist}|hyperpage}{29}
+\indexentry{PageBlock.MultipleObjectsReturned@\spxentry{PageBlock.MultipleObjectsReturned}|hyperpage}{29}
+\indexentry{block (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{block}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{29}
+\indexentry{block\_id (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{block\_id}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{29}
+\indexentry{history (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{history}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{29}
+\indexentry{id (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{id}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{29}
+\indexentry{objects (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{objects}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{29}
+\indexentry{page (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{page}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{29}
+\indexentry{page\_id (pages\_app.models.page\_block.PageBlock attribute)@\spxentry{page\_id}\spxextra{pages\_app.models.page\_block.PageBlock attribute}|hyperpage}{29}
+\indexentry{save\_without\_historical\_record() (pages\_app.models.page\_block.PageBlock method)@\spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.page\_block.PageBlock method}|hyperpage}{29}
+\indexentry{module@\spxentry{module}!pages\_app.models.signals@\spxentry{pages\_app.models.signals}|hyperpage}{30}
+\indexentry{pages\_app.models.signals@\spxentry{pages\_app.models.signals}!module@\spxentry{module}|hyperpage}{30}
+\indexentry{invalidate\_cache() (in module pages\_app.models.signals)@\spxentry{invalidate\_cache()}\spxextra{in module pages\_app.models.signals}|hyperpage}{30}
+\indexentry{module@\spxentry{module}!pages\_app.models@\spxentry{pages\_app.models}|hyperpage}{30}
+\indexentry{pages\_app.models@\spxentry{pages\_app.models}!module@\spxentry{module}|hyperpage}{30}
+\indexentry{Block (class in pages\_app.models)@\spxentry{Block}\spxextra{class in pages\_app.models}|hyperpage}{31}
+\indexentry{name (pages\_app.models.Block attribute)@\spxentry{name}\spxextra{pages\_app.models.Block attribute}|hyperpage}{31}
+\indexentry{template (pages\_app.models.Block attribute)@\spxentry{template}\spxextra{pages\_app.models.Block attribute}|hyperpage}{31}
+\indexentry{content (pages\_app.models.Block attribute)@\spxentry{content}\spxextra{pages\_app.models.Block attribute}|hyperpage}{31}
+\indexentry{sorting (pages\_app.models.Block attribute)@\spxentry{sorting}\spxextra{pages\_app.models.Block attribute}|hyperpage}{31}
+\indexentry{image (pages\_app.models.Block attribute)@\spxentry{image}\spxextra{pages\_app.models.Block attribute}|hyperpage}{31}
+\indexentry{history (pages\_app.models.Block attribute)@\spxentry{history}\spxextra{pages\_app.models.Block attribute}|hyperpage}{31}
+\indexentry{Block.DoesNotExist@\spxentry{Block.DoesNotExist}|hyperpage}{31}
+\indexentry{Block.MultipleObjectsReturned@\spxentry{Block.MultipleObjectsReturned}|hyperpage}{32}
+\indexentry{created\_at (pages\_app.models.Block attribute)@\spxentry{created\_at}\spxextra{pages\_app.models.Block attribute}|hyperpage}{32}
+\indexentry{get\_image\_url() (pages\_app.models.Block method)@\spxentry{get\_image\_url()}\spxextra{pages\_app.models.Block method}|hyperpage}{32}
+\indexentry{get\_next\_by\_created\_at() (pages\_app.models.Block method)@\spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.Block method}|hyperpage}{32}
+\indexentry{get\_next\_by\_updated\_at() (pages\_app.models.Block method)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.Block method}|hyperpage}{32}
+\indexentry{get\_previous\_by\_created\_at() (pages\_app.models.Block method)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.Block method}|hyperpage}{32}
+\indexentry{get\_previous\_by\_updated\_at() (pages\_app.models.Block method)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.Block method}|hyperpage}{32}
+\indexentry{history (pages\_app.models.Block attribute)@\spxentry{history}\spxextra{pages\_app.models.Block attribute}|hyperpage}{32}
+\indexentry{id (pages\_app.models.Block attribute)@\spxentry{id}\spxextra{pages\_app.models.Block attribute}|hyperpage}{32}
+\indexentry{image (pages\_app.models.Block attribute)@\spxentry{image}\spxextra{pages\_app.models.Block attribute}|hyperpage}{32}
+\indexentry{name (pages\_app.models.Block attribute)@\spxentry{name}\spxextra{pages\_app.models.Block attribute}|hyperpage}{32}
+\indexentry{objects (pages\_app.models.Block attribute)@\spxentry{objects}\spxextra{pages\_app.models.Block attribute}|hyperpage}{32}
+\indexentry{pageblock\_set (pages\_app.models.Block attribute)@\spxentry{pageblock\_set}\spxextra{pages\_app.models.Block attribute}|hyperpage}{32}
+\indexentry{save\_without\_historical\_record() (pages\_app.models.Block method)@\spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.Block method}|hyperpage}{32}
+\indexentry{sorting (pages\_app.models.Block attribute)@\spxentry{sorting}\spxextra{pages\_app.models.Block attribute}|hyperpage}{33}
+\indexentry{template (pages\_app.models.Block attribute)@\spxentry{template}\spxextra{pages\_app.models.Block attribute}|hyperpage}{33}
+\indexentry{updated\_at (pages\_app.models.Block attribute)@\spxentry{updated\_at}\spxextra{pages\_app.models.Block attribute}|hyperpage}{33}
+\indexentry{MenuItem (class in pages\_app.models)@\spxentry{MenuItem}\spxextra{class in pages\_app.models}|hyperpage}{33}
+\indexentry{page (pages\_app.models.MenuItem attribute)@\spxentry{page}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{33}
+\indexentry{name (pages\_app.models.MenuItem attribute)@\spxentry{name}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{33}
+\indexentry{template (pages\_app.models.MenuItem attribute)@\spxentry{template}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{33}
+\indexentry{sorting (pages\_app.models.MenuItem attribute)@\spxentry{sorting}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{33}
+\indexentry{history (pages\_app.models.MenuItem attribute)@\spxentry{history}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{33}
+\indexentry{MenuItem.DoesNotExist@\spxentry{MenuItem.DoesNotExist}|hyperpage}{34}
+\indexentry{MenuItem.MultipleObjectsReturned@\spxentry{MenuItem.MultipleObjectsReturned}|hyperpage}{34}
+\indexentry{created\_at (pages\_app.models.MenuItem attribute)@\spxentry{created\_at}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{34}
+\indexentry{get\_next\_by\_created\_at() (pages\_app.models.MenuItem method)@\spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.MenuItem method}|hyperpage}{34}
+\indexentry{get\_next\_by\_updated\_at() (pages\_app.models.MenuItem method)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.MenuItem method}|hyperpage}{34}
+\indexentry{get\_previous\_by\_created\_at() (pages\_app.models.MenuItem method)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.MenuItem method}|hyperpage}{34}
+\indexentry{get\_previous\_by\_updated\_at() (pages\_app.models.MenuItem method)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.MenuItem method}|hyperpage}{34}
+\indexentry{history (pages\_app.models.MenuItem attribute)@\spxentry{history}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{34}
+\indexentry{id (pages\_app.models.MenuItem attribute)@\spxentry{id}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{34}
+\indexentry{name (pages\_app.models.MenuItem attribute)@\spxentry{name}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{34}
+\indexentry{objects (pages\_app.models.MenuItem attribute)@\spxentry{objects}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{34}
+\indexentry{page (pages\_app.models.MenuItem attribute)@\spxentry{page}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{34}
+\indexentry{page\_id (pages\_app.models.MenuItem attribute)@\spxentry{page\_id}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{34}
+\indexentry{save\_without\_historical\_record() (pages\_app.models.MenuItem method)@\spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.MenuItem method}|hyperpage}{34}
+\indexentry{sorting (pages\_app.models.MenuItem attribute)@\spxentry{sorting}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{34}
+\indexentry{template (pages\_app.models.MenuItem attribute)@\spxentry{template}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{35}
+\indexentry{updated\_at (pages\_app.models.MenuItem attribute)@\spxentry{updated\_at}\spxextra{pages\_app.models.MenuItem attribute}|hyperpage}{35}
+\indexentry{Page (class in pages\_app.models)@\spxentry{Page}\spxextra{class in pages\_app.models}|hyperpage}{35}
+\indexentry{title (pages\_app.models.Page attribute)@\spxentry{title}\spxextra{pages\_app.models.Page attribute}|hyperpage}{35}
+\indexentry{url\_path (pages\_app.models.Page attribute)@\spxentry{url\_path}\spxextra{pages\_app.models.Page attribute}|hyperpage}{35}
+\indexentry{name (pages\_app.models.Page attribute)@\spxentry{name}\spxextra{pages\_app.models.Page attribute}|hyperpage}{35}
+\indexentry{language (pages\_app.models.Page attribute)@\spxentry{language}\spxextra{pages\_app.models.Page attribute}|hyperpage}{35}
+\indexentry{meta\_description (pages\_app.models.Page attribute)@\spxentry{meta\_description}\spxextra{pages\_app.models.Page attribute}|hyperpage}{35}
+\indexentry{meta\_keywords (pages\_app.models.Page attribute)@\spxentry{meta\_keywords}\spxextra{pages\_app.models.Page attribute}|hyperpage}{35}
+\indexentry{published\_at (pages\_app.models.Page attribute)@\spxentry{published\_at}\spxextra{pages\_app.models.Page attribute}|hyperpage}{35}
+\indexentry{history (pages\_app.models.Page attribute)@\spxentry{history}\spxextra{pages\_app.models.Page attribute}|hyperpage}{35}
+\indexentry{Page.DoesNotExist@\spxentry{Page.DoesNotExist}|hyperpage}{36}
+\indexentry{LANGUAGE\_CHOICES (pages\_app.models.Page attribute)@\spxentry{LANGUAGE\_CHOICES}\spxextra{pages\_app.models.Page attribute}|hyperpage}{36}
+\indexentry{Page.MultipleObjectsReturned@\spxentry{Page.MultipleObjectsReturned}|hyperpage}{36}
+\indexentry{clean() (pages\_app.models.Page method)@\spxentry{clean()}\spxextra{pages\_app.models.Page method}|hyperpage}{36}
+\indexentry{created\_at (pages\_app.models.Page attribute)@\spxentry{created\_at}\spxextra{pages\_app.models.Page attribute}|hyperpage}{36}
+\indexentry{get\_language\_display() (pages\_app.models.Page method)@\spxentry{get\_language\_display()}\spxextra{pages\_app.models.Page method}|hyperpage}{36}
+\indexentry{get\_next\_by\_created\_at() (pages\_app.models.Page method)@\spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.Page method}|hyperpage}{36}
+\indexentry{get\_next\_by\_updated\_at() (pages\_app.models.Page method)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.Page method}|hyperpage}{36}
+\indexentry{get\_previous\_by\_created\_at() (pages\_app.models.Page method)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.Page method}|hyperpage}{36}
+\indexentry{get\_previous\_by\_updated\_at() (pages\_app.models.Page method)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.Page method}|hyperpage}{36}
+\indexentry{history (pages\_app.models.Page attribute)@\spxentry{history}\spxextra{pages\_app.models.Page attribute}|hyperpage}{36}
+\indexentry{id (pages\_app.models.Page attribute)@\spxentry{id}\spxextra{pages\_app.models.Page attribute}|hyperpage}{36}
+\indexentry{is\_published (pages\_app.models.Page property)@\spxentry{is\_published}\spxextra{pages\_app.models.Page property}|hyperpage}{36}
+\indexentry{language (pages\_app.models.Page attribute)@\spxentry{language}\spxextra{pages\_app.models.Page attribute}|hyperpage}{36}
+\indexentry{menuitem\_set (pages\_app.models.Page attribute)@\spxentry{menuitem\_set}\spxextra{pages\_app.models.Page attribute}|hyperpage}{36}
+\indexentry{meta\_description (pages\_app.models.Page attribute)@\spxentry{meta\_description}\spxextra{pages\_app.models.Page attribute}|hyperpage}{37}
+\indexentry{meta\_keywords (pages\_app.models.Page attribute)@\spxentry{meta\_keywords}\spxextra{pages\_app.models.Page attribute}|hyperpage}{37}
+\indexentry{name (pages\_app.models.Page attribute)@\spxentry{name}\spxextra{pages\_app.models.Page attribute}|hyperpage}{37}
+\indexentry{objects (pages\_app.models.Page attribute)@\spxentry{objects}\spxextra{pages\_app.models.Page attribute}|hyperpage}{37}
+\indexentry{pageblock\_set (pages\_app.models.Page attribute)@\spxentry{pageblock\_set}\spxextra{pages\_app.models.Page attribute}|hyperpage}{37}
+\indexentry{publish() (pages\_app.models.Page method)@\spxentry{publish()}\spxextra{pages\_app.models.Page method}|hyperpage}{37}
+\indexentry{published\_at (pages\_app.models.Page attribute)@\spxentry{published\_at}\spxextra{pages\_app.models.Page attribute}|hyperpage}{37}
+\indexentry{save() (pages\_app.models.Page method)@\spxentry{save()}\spxextra{pages\_app.models.Page method}|hyperpage}{37}
+\indexentry{save\_without\_historical\_record() (pages\_app.models.Page method)@\spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.Page method}|hyperpage}{37}
+\indexentry{title (pages\_app.models.Page attribute)@\spxentry{title}\spxextra{pages\_app.models.Page attribute}|hyperpage}{37}
+\indexentry{unpublish() (pages\_app.models.Page method)@\spxentry{unpublish()}\spxextra{pages\_app.models.Page method}|hyperpage}{37}
+\indexentry{updated\_at (pages\_app.models.Page attribute)@\spxentry{updated\_at}\spxextra{pages\_app.models.Page attribute}|hyperpage}{38}
+\indexentry{url\_path (pages\_app.models.Page attribute)@\spxentry{url\_path}\spxextra{pages\_app.models.Page attribute}|hyperpage}{38}
+\indexentry{PageBlock (class in pages\_app.models)@\spxentry{PageBlock}\spxextra{class in pages\_app.models}|hyperpage}{38}
+\indexentry{page (pages\_app.models.PageBlock attribute)@\spxentry{page}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{38}
+\indexentry{block (pages\_app.models.PageBlock attribute)@\spxentry{block}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{38}
+\indexentry{position (pages\_app.models.PageBlock attribute)@\spxentry{position}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{38}
+\indexentry{history (pages\_app.models.PageBlock attribute)@\spxentry{history}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{38}
+\indexentry{PageBlock.DoesNotExist@\spxentry{PageBlock.DoesNotExist}|hyperpage}{38}
+\indexentry{PageBlock.MultipleObjectsReturned@\spxentry{PageBlock.MultipleObjectsReturned}|hyperpage}{38}
+\indexentry{block (pages\_app.models.PageBlock attribute)@\spxentry{block}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{38}
+\indexentry{block\_id (pages\_app.models.PageBlock attribute)@\spxentry{block\_id}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{39}
+\indexentry{history (pages\_app.models.PageBlock attribute)@\spxentry{history}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{39}
+\indexentry{id (pages\_app.models.PageBlock attribute)@\spxentry{id}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{39}
+\indexentry{objects (pages\_app.models.PageBlock attribute)@\spxentry{objects}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{39}
+\indexentry{page (pages\_app.models.PageBlock attribute)@\spxentry{page}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{39}
+\indexentry{page\_id (pages\_app.models.PageBlock attribute)@\spxentry{page\_id}\spxextra{pages\_app.models.PageBlock attribute}|hyperpage}{39}
+\indexentry{save\_without\_historical\_record() (pages\_app.models.PageBlock method)@\spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.PageBlock method}|hyperpage}{39}
+\indexentry{module@\spxentry{module}!pages\_app.tests.test\_cache@\spxentry{pages\_app.tests.test\_cache}|hyperpage}{39}
+\indexentry{pages\_app.tests.test\_cache@\spxentry{pages\_app.tests.test\_cache}!module@\spxentry{module}|hyperpage}{39}
+\indexentry{CacheTests (class in pages\_app.tests.test\_cache)@\spxentry{CacheTests}\spxextra{class in pages\_app.tests.test\_cache}|hyperpage}{40}
+\indexentry{setUp() (pages\_app.tests.test\_cache.CacheTests method)@\spxentry{setUp()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}|hyperpage}{40}
+\indexentry{tearDown() (pages\_app.tests.test\_cache.CacheTests method)@\spxentry{tearDown()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}|hyperpage}{40}
+\indexentry{test\_cache\_clear() (pages\_app.tests.test\_cache.CacheTests method)@\spxentry{test\_cache\_clear()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}|hyperpage}{40}
+\indexentry{test\_cache\_delete() (pages\_app.tests.test\_cache.CacheTests method)@\spxentry{test\_cache\_delete()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}|hyperpage}{40}
+\indexentry{test\_cache\_set\_get() (pages\_app.tests.test\_cache.CacheTests method)@\spxentry{test\_cache\_set\_get()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}|hyperpage}{41}
+\indexentry{test\_cache\_timeout() (pages\_app.tests.test\_cache.CacheTests method)@\spxentry{test\_cache\_timeout()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}|hyperpage}{41}
+\indexentry{module@\spxentry{module}!pages\_app.tests.test\_models@\spxentry{pages\_app.tests.test\_models}|hyperpage}{41}
+\indexentry{pages\_app.tests.test\_models@\spxentry{pages\_app.tests.test\_models}!module@\spxentry{module}|hyperpage}{41}
+\indexentry{BlockModelTest (class in pages\_app.tests.test\_models)@\spxentry{BlockModelTest}\spxextra{class in pages\_app.tests.test\_models}|hyperpage}{41}
+\indexentry{test\_block\_creation() (pages\_app.tests.test\_models.BlockModelTest method)@\spxentry{test\_block\_creation()}\spxextra{pages\_app.tests.test\_models.BlockModelTest method}|hyperpage}{41}
+\indexentry{test\_block\_ordering() (pages\_app.tests.test\_models.BlockModelTest method)@\spxentry{test\_block\_ordering()}\spxextra{pages\_app.tests.test\_models.BlockModelTest method}|hyperpage}{42}
+\indexentry{MenuItemModelTest (class in pages\_app.tests.test\_models)@\spxentry{MenuItemModelTest}\spxextra{class in pages\_app.tests.test\_models}|hyperpage}{42}
+\indexentry{setUp() (pages\_app.tests.test\_models.MenuItemModelTest method)@\spxentry{setUp()}\spxextra{pages\_app.tests.test\_models.MenuItemModelTest method}|hyperpage}{42}
+\indexentry{test\_menu\_item\_creation() (pages\_app.tests.test\_models.MenuItemModelTest method)@\spxentry{test\_menu\_item\_creation()}\spxextra{pages\_app.tests.test\_models.MenuItemModelTest method}|hyperpage}{42}
+\indexentry{test\_menu\_item\_ordering() (pages\_app.tests.test\_models.MenuItemModelTest method)@\spxentry{test\_menu\_item\_ordering()}\spxextra{pages\_app.tests.test\_models.MenuItemModelTest method}|hyperpage}{42}
+\indexentry{test\_menu\_item\_page\_deletion() (pages\_app.tests.test\_models.MenuItemModelTest method)@\spxentry{test\_menu\_item\_page\_deletion()}\spxextra{pages\_app.tests.test\_models.MenuItemModelTest method}|hyperpage}{42}
+\indexentry{PageBlockModelTest (class in pages\_app.tests.test\_models)@\spxentry{PageBlockModelTest}\spxextra{class in pages\_app.tests.test\_models}|hyperpage}{42}
+\indexentry{setUp() (pages\_app.tests.test\_models.PageBlockModelTest method)@\spxentry{setUp()}\spxextra{pages\_app.tests.test\_models.PageBlockModelTest method}|hyperpage}{43}
+\indexentry{test\_pageblock\_cascade\_deletion() (pages\_app.tests.test\_models.PageBlockModelTest method)@\spxentry{test\_pageblock\_cascade\_deletion()}\spxextra{pages\_app.tests.test\_models.PageBlockModelTest method}|hyperpage}{43}
+\indexentry{test\_pageblock\_creation() (pages\_app.tests.test\_models.PageBlockModelTest method)@\spxentry{test\_pageblock\_creation()}\spxextra{pages\_app.tests.test\_models.PageBlockModelTest method}|hyperpage}{43}
+\indexentry{PageModelTest (class in pages\_app.tests.test\_models)@\spxentry{PageModelTest}\spxextra{class in pages\_app.tests.test\_models}|hyperpage}{43}
+\indexentry{setUp() (pages\_app.tests.test\_models.PageModelTest method)@\spxentry{setUp()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}|hyperpage}{43}
+\indexentry{test\_page\_creation() (pages\_app.tests.test\_models.PageModelTest method)@\spxentry{test\_page\_creation()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}|hyperpage}{43}
+\indexentry{test\_page\_language\_validation() (pages\_app.tests.test\_models.PageModelTest method)@\spxentry{test\_page\_language\_validation()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}|hyperpage}{44}
+\indexentry{test\_page\_publish\_unpublish() (pages\_app.tests.test\_models.PageModelTest method)@\spxentry{test\_page\_publish\_unpublish()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}|hyperpage}{44}
+\indexentry{test\_page\_url\_validation() (pages\_app.tests.test\_models.PageModelTest method)@\spxentry{test\_page\_url\_validation()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}|hyperpage}{44}
+\indexentry{test\_publish\_unpublish() (pages\_app.tests.test\_models.PageModelTest method)@\spxentry{test\_publish\_unpublish()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}|hyperpage}{44}
+\indexentry{test\_url\_path\_validation() (pages\_app.tests.test\_models.PageModelTest method)@\spxentry{test\_url\_path\_validation()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}|hyperpage}{45}
+\indexentry{TimestampedModelTest (class in pages\_app.tests.test\_models)@\spxentry{TimestampedModelTest}\spxextra{class in pages\_app.tests.test\_models}|hyperpage}{45}
+\indexentry{setUp() (pages\_app.tests.test\_models.TimestampedModelTest method)@\spxentry{setUp()}\spxextra{pages\_app.tests.test\_models.TimestampedModelTest method}|hyperpage}{45}
+\indexentry{test\_timestamps\_creation() (pages\_app.tests.test\_models.TimestampedModelTest method)@\spxentry{test\_timestamps\_creation()}\spxextra{pages\_app.tests.test\_models.TimestampedModelTest method}|hyperpage}{45}
+\indexentry{test\_updated\_at\_auto\_updates() (pages\_app.tests.test\_models.TimestampedModelTest method)@\spxentry{test\_updated\_at\_auto\_updates()}\spxextra{pages\_app.tests.test\_models.TimestampedModelTest method}|hyperpage}{45}
+\indexentry{module@\spxentry{module}!pages\_app.tests.test\_views@\spxentry{pages\_app.tests.test\_views}|hyperpage}{46}
+\indexentry{pages\_app.tests.test\_views@\spxentry{pages\_app.tests.test\_views}!module@\spxentry{module}|hyperpage}{46}
+\indexentry{ViewTests (class in pages\_app.tests.test\_views)@\spxentry{ViewTests}\spxextra{class in pages\_app.tests.test\_views}|hyperpage}{46}
+\indexentry{setUp() (pages\_app.tests.test\_views.ViewTests method)@\spxentry{setUp()}\spxextra{pages\_app.tests.test\_views.ViewTests method}|hyperpage}{46}
+\indexentry{tearDown() (pages\_app.tests.test\_views.ViewTests method)@\spxentry{tearDown()}\spxextra{pages\_app.tests.test\_views.ViewTests method}|hyperpage}{46}
+\indexentry{test\_home\_view() (pages\_app.tests.test\_views.ViewTests method)@\spxentry{test\_home\_view()}\spxextra{pages\_app.tests.test\_views.ViewTests method}|hyperpage}{46}
+\indexentry{test\_render\_page\_existing\_page() (pages\_app.tests.test\_views.ViewTests method)@\spxentry{test\_render\_page\_existing\_page()}\spxextra{pages\_app.tests.test\_views.ViewTests method}|hyperpage}{46}
+\indexentry{test\_render\_page\_nonexistent\_page() (pages\_app.tests.test\_views.ViewTests method)@\spxentry{test\_render\_page\_nonexistent\_page()}\spxextra{pages\_app.tests.test\_views.ViewTests method}|hyperpage}{46}
+\indexentry{test\_render\_page\_unpublished\_page() (pages\_app.tests.test\_views.ViewTests method)@\spxentry{test\_render\_page\_unpublished\_page()}\spxextra{pages\_app.tests.test\_views.ViewTests method}|hyperpage}{46}
+\indexentry{module@\spxentry{module}!pages\_app.tests@\spxentry{pages\_app.tests}|hyperpage}{46}
+\indexentry{pages\_app.tests@\spxentry{pages\_app.tests}!module@\spxentry{module}|hyperpage}{46}
+\indexentry{module@\spxentry{module}!pages\_app.views.home@\spxentry{pages\_app.views.home}|hyperpage}{47}
+\indexentry{pages\_app.views.home@\spxentry{pages\_app.views.home}!module@\spxentry{module}|hyperpage}{47}
+\indexentry{render\_page() (in module pages\_app.views.home)@\spxentry{render\_page()}\spxextra{in module pages\_app.views.home}|hyperpage}{47}
+\indexentry{module@\spxentry{module}!pages\_app.views.page@\spxentry{pages\_app.views.page}|hyperpage}{47}
+\indexentry{pages\_app.views.page@\spxentry{pages\_app.views.page}!module@\spxentry{module}|hyperpage}{47}
+\indexentry{render\_page() (in module pages\_app.views.page)@\spxentry{render\_page()}\spxextra{in module pages\_app.views.page}|hyperpage}{47}
+\indexentry{module@\spxentry{module}!pages\_app.views@\spxentry{pages\_app.views}|hyperpage}{48}
+\indexentry{pages\_app.views@\spxentry{pages\_app.views}!module@\spxentry{module}|hyperpage}{48}
+\indexentry{render\_page() (in module pages\_app.views)@\spxentry{render\_page()}\spxextra{in module pages\_app.views}|hyperpage}{48}
+\indexentry{module@\spxentry{module}!pages\_app.admin@\spxentry{pages\_app.admin}|hyperpage}{49}
+\indexentry{pages\_app.admin@\spxentry{pages\_app.admin}!module@\spxentry{module}|hyperpage}{49}
+\indexentry{BlockAdmin (class in pages\_app.admin)@\spxentry{BlockAdmin}\spxextra{class in pages\_app.admin}|hyperpage}{49}
+\indexentry{history\_list\_display (pages\_app.admin.BlockAdmin attribute)@\spxentry{history\_list\_display}\spxextra{pages\_app.admin.BlockAdmin attribute}|hyperpage}{49}
+\indexentry{list\_display (pages\_app.admin.BlockAdmin attribute)@\spxentry{list\_display}\spxextra{pages\_app.admin.BlockAdmin attribute}|hyperpage}{49}
+\indexentry{media (pages\_app.admin.BlockAdmin property)@\spxentry{media}\spxextra{pages\_app.admin.BlockAdmin property}|hyperpage}{49}
+\indexentry{MenuItemAdmin (class in pages\_app.admin)@\spxentry{MenuItemAdmin}\spxextra{class in pages\_app.admin}|hyperpage}{49}
+\indexentry{history\_list\_display (pages\_app.admin.MenuItemAdmin attribute)@\spxentry{history\_list\_display}\spxextra{pages\_app.admin.MenuItemAdmin attribute}|hyperpage}{49}
+\indexentry{list\_display (pages\_app.admin.MenuItemAdmin attribute)@\spxentry{list\_display}\spxextra{pages\_app.admin.MenuItemAdmin attribute}|hyperpage}{49}
+\indexentry{media (pages\_app.admin.MenuItemAdmin property)@\spxentry{media}\spxextra{pages\_app.admin.MenuItemAdmin property}|hyperpage}{49}
+\indexentry{PageAdmin (class in pages\_app.admin)@\spxentry{PageAdmin}\spxextra{class in pages\_app.admin}|hyperpage}{49}
+\indexentry{history\_list\_display (pages\_app.admin.PageAdmin attribute)@\spxentry{history\_list\_display}\spxextra{pages\_app.admin.PageAdmin attribute}|hyperpage}{49}
+\indexentry{list\_display (pages\_app.admin.PageAdmin attribute)@\spxentry{list\_display}\spxextra{pages\_app.admin.PageAdmin attribute}|hyperpage}{49}
+\indexentry{media (pages\_app.admin.PageAdmin property)@\spxentry{media}\spxextra{pages\_app.admin.PageAdmin property}|hyperpage}{49}
+\indexentry{search\_fields (pages\_app.admin.PageAdmin attribute)@\spxentry{search\_fields}\spxextra{pages\_app.admin.PageAdmin attribute}|hyperpage}{49}
+\indexentry{PageBlockAdmin (class in pages\_app.admin)@\spxentry{PageBlockAdmin}\spxextra{class in pages\_app.admin}|hyperpage}{50}
+\indexentry{get\_block\_name() (pages\_app.admin.PageBlockAdmin method)@\spxentry{get\_block\_name()}\spxextra{pages\_app.admin.PageBlockAdmin method}|hyperpage}{50}
+\indexentry{get\_page\_title() (pages\_app.admin.PageBlockAdmin method)@\spxentry{get\_page\_title()}\spxextra{pages\_app.admin.PageBlockAdmin method}|hyperpage}{50}
+\indexentry{history\_list\_display (pages\_app.admin.PageBlockAdmin attribute)@\spxentry{history\_list\_display}\spxextra{pages\_app.admin.PageBlockAdmin attribute}|hyperpage}{50}
+\indexentry{list\_display (pages\_app.admin.PageBlockAdmin attribute)@\spxentry{list\_display}\spxextra{pages\_app.admin.PageBlockAdmin attribute}|hyperpage}{50}
+\indexentry{list\_filter (pages\_app.admin.PageBlockAdmin attribute)@\spxentry{list\_filter}\spxextra{pages\_app.admin.PageBlockAdmin attribute}|hyperpage}{50}
+\indexentry{media (pages\_app.admin.PageBlockAdmin property)@\spxentry{media}\spxextra{pages\_app.admin.PageBlockAdmin property}|hyperpage}{50}
+\indexentry{search\_fields (pages\_app.admin.PageBlockAdmin attribute)@\spxentry{search\_fields}\spxextra{pages\_app.admin.PageBlockAdmin attribute}|hyperpage}{50}
+\indexentry{module@\spxentry{module}!pages\_app.apps@\spxentry{pages\_app.apps}|hyperpage}{50}
+\indexentry{pages\_app.apps@\spxentry{pages\_app.apps}!module@\spxentry{module}|hyperpage}{50}
+\indexentry{PagesAppConfig (class in pages\_app.apps)@\spxentry{PagesAppConfig}\spxextra{class in pages\_app.apps}|hyperpage}{50}
+\indexentry{default\_auto\_field (pages\_app.apps.PagesAppConfig attribute)@\spxentry{default\_auto\_field}\spxextra{pages\_app.apps.PagesAppConfig attribute}|hyperpage}{50}
+\indexentry{name (pages\_app.apps.PagesAppConfig attribute)@\spxentry{name}\spxextra{pages\_app.apps.PagesAppConfig attribute}|hyperpage}{50}
+\indexentry{ready() (pages\_app.apps.PagesAppConfig method)@\spxentry{ready()}\spxextra{pages\_app.apps.PagesAppConfig method}|hyperpage}{50}
+\indexentry{module@\spxentry{module}!pages\_app.urls@\spxentry{pages\_app.urls}|hyperpage}{50}
+\indexentry{pages\_app.urls@\spxentry{pages\_app.urls}!module@\spxentry{module}|hyperpage}{50}
+\indexentry{module@\spxentry{module}!pages\_app.views@\spxentry{pages\_app.views}|hyperpage}{51}
+\indexentry{pages\_app.views@\spxentry{pages\_app.views}!module@\spxentry{module}|hyperpage}{51}
+\indexentry{render\_page() (in module pages\_app.views)@\spxentry{render\_page()}\spxextra{in module pages\_app.views}|hyperpage}{51}
+\indexentry{module@\spxentry{module}!pages\_app@\spxentry{pages\_app}|hyperpage}{52}
+\indexentry{pages\_app@\spxentry{pages\_app}!module@\spxentry{module}|hyperpage}{52}
+\indexentry{\_\_version\_\_ (in module pages\_app)@\spxentry{\_\_version\_\_}\spxextra{in module pages\_app}|hyperpage}{52}
+\indexentry{\_\_author\_\_ (in module pages\_app)@\spxentry{\_\_author\_\_}\spxextra{in module pages\_app}|hyperpage}{52}

@@ -1,0 +1,9 @@
+{% if node.tagname == 'uml' %}
+<p class="plantuml">
+    <picture>
+        <source type="image/svg+xml" src="{{ pathto('_images/plantuml-' + node.get('plantuml_checksum') + '.svg', 1) }}">
+        <img src="{{ pathto('_images/plantuml-' + node.get('plantuml_checksum') + '.png', 1) }}" 
+             alt="{{ node.get('caption', '') }}">
+    </picture>
+</p>
+{% endif %}

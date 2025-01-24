@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Endpoints &mdash; RIS-Web Backend 1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=56dcb7b8"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Authentication" href="authentication.html" />
+    <link rel="prev" title="API Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            RIS-Web Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#installation-steps">Installation Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#database-setup">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#start-development-server">Start Development Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/db_schema.html">Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/db_schema.html#model-overview">Model Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/db_schema.html#model-details">Model Details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/db_schema.html#page-model">Page Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/db_schema.html#block-model">Block Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/db_schema.html#menuitem-model">MenuItem Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models/db_schema.html#key-features">Key Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../views/index.html">Views Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../views/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../views/home.html">Home View Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views/home.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/home.html#key-functions">Key Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/home.html#cache-implementation">Cache Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/home.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/home.html#models-used">Models Used</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/home.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views/page.html">Page Views Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views/page.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/page.html#key-components">Key Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/page.html#cache-configuration">Cache Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/page.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../views/index.html#home-view">Home View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views/index.html#page-view">Page View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/index.html">Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/index.html#deployment-steps">Deployment Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/index.html#example-configuration">Example Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#core-endpoints">Core Endpoints</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="authentication.html">Authentication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="authentication.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="authentication.html#authentication-methods">Authentication Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="authentication.html#security-configuration">Security Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="examples.html#api-usage-examples">API Usage Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authentication.html">Authentication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="authentication.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authentication.html#authentication-methods">Authentication Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authentication.html#security-configuration">Security Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#api-usage-examples">API Usage Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#page-creation">Page Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#block-management">Block Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#cache-operations">Cache Operations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#core-endpoints">Core Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#page-management">Page Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#block-management">Block Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../pages_app.html">pages_app package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html">pages_app.migrations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html">pages_app.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.tests.html">pages_app.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.views.html">pages_app.views package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#module-pages_app.admin">pages_app.admin module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.BlockAdmin"><code class="docutils literal notranslate"><span class="pre">BlockAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.MenuItemAdmin"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageAdmin"><code class="docutils literal notranslate"><span class="pre">PageAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#module-pages_app.apps">pages_app.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.apps.PagesAppConfig"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#module-pages_app.urls">pages_app.urls module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#url-patterns">URL Patterns:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pattern-matching">Pattern Matching:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#example-usage">Example Usage:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#see-also">See Also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#module-pages_app.views">pages_app.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#id1">Pages App Views Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.views.render_page"><code class="docutils literal notranslate"><span class="pre">render_page()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#module-pages_app">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.__author__"><code class="docutils literal notranslate"><span class="pre">__author__</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API Documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#overview">Overview</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">API Endpoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="authentication.html">Authentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#authentication">Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#endpoints">Endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../views/index.html">Views Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../views/index.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views/home.html">Home View Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views/page.html">Page Views Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views/index.html#home-view">Home View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../views/index.html#page-view">Page View</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models/db_schema.html">Database Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/db_schema.html#model-overview">Model Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/db_schema.html#model-details">Model Details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models/db_schema.html#page-model">Page Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../models/db_schema.html#block-model">Block Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../models/db_schema.html#menuitem-model">MenuItem Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../models/db_schema.html#key-features">Key Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pages_app.html">pages_app package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pages_app.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.migrations.html">pages_app.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0001_initial">pages_app.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0002_menuitem_name">pages_app.migrations.0002_menuitem_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0003_block_name_page_name">pages_app.migrations.0003_block_name_page_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0004_alter_block_name">pages_app.migrations.0004_alter_block_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0005_historicalblock_historicalmenuitem_historicalpage_and_more">pages_app.migrations.0005_historicalblock_historicalmenuitem_historicalpage_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0006_block_image_historicalblock_image">pages_app.migrations.0006_block_image_historicalblock_image module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0007_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0007_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0008_remove_page_pages_app_p_publish_9c7cf5_idx_and_more">pages_app.migrations.0008_remove_page_pages_app_p_publish_9c7cf5_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0009_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0009_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0010_remove_page_pages_app_p_publish_9c7cf5_idx_and_more">pages_app.migrations.0010_remove_page_pages_app_p_publish_9c7cf5_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0011_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0011_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0012_block_script_historicalblock_script">pages_app.migrations.0012_block_script_historicalblock_script module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations.0013_remove_block_script_remove_historicalblock_script">pages_app.migrations.0013_remove_block_script_remove_historicalblock_script module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.migrations.html#module-pages_app.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.models.html">pages_app.models package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html#module-pages_app.models.base">pages_app.models.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html#module-pages_app.models.block">pages_app.models.block module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html#module-pages_app.models.menu_item">pages_app.models.menu_item module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html#module-pages_app.models.page">pages_app.models.page module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html#module-pages_app.models.page_block">pages_app.models.page_block module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html#module-pages_app.models.signals">pages_app.models.signals module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.models.html#module-pages_app.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.tests.html">pages_app.tests package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.tests.html#module-pages_app.tests.test_cache">pages_app.tests.test_cache module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.tests.html#module-pages_app.tests.test_models">pages_app.tests.test_models module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.tests.html#module-pages_app.tests.test_views">pages_app.tests.test_views module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.tests.html#module-pages_app.tests">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.views.html">pages_app.views package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.views.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.views.html#module-pages_app.views.home">pages_app.views.home module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.views.html#module-pages_app.views.page">pages_app.views.page module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.views.html#module-pages_app.views">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pages_app.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pages_app.html#module-pages_app.admin">pages_app.admin module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pages_app.admin.BlockAdmin"><code class="docutils literal notranslate"><span class="pre">BlockAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.BlockAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.BlockAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.BlockAdmin.media"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.media</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pages_app.admin.MenuItemAdmin"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.MenuItemAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.MenuItemAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.MenuItemAdmin.media"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.media</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageAdmin"><code class="docutils literal notranslate"><span class="pre">PageAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">PageAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">PageAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageAdmin.media"><code class="docutils literal notranslate"><span class="pre">PageAdmin.media</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">PageAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin.get_block_name"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.get_block_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin.get_page_title"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.get_page_title()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin.list_filter"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.list_filter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin.media"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.media</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.admin.PageBlockAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pages_app.html#module-pages_app.apps">pages_app.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pages_app.apps.PagesAppConfig"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.apps.PagesAppConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.apps.PagesAppConfig.name"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pages_app.html#pages_app.apps.PagesAppConfig.ready"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.ready()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pages_app.html#module-pages_app.urls">pages_app.urls module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#url-patterns">URL Patterns:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pattern-matching">Pattern Matching:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#example-usage">Example Usage:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#see-also">See Also:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pages_app.html#module-pages_app.views">pages_app.views module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#id1">Pages App Views Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pages_app.views.render_page"><code class="docutils literal notranslate"><span class="pre">render_page()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pages_app.html#module-pages_app">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pages_app.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pages_app.html#pages_app.__author__"><code class="docutils literal notranslate"><span class="pre">__author__</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RIS-Web Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Documentation</a></li>
+      <li class="breadcrumb-item active">API Endpoints</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/endpoints.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-endpoints">
+<h1>API Endpoints<a class="headerlink" href="#api-endpoints" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Documentation of available API endpoints in the RIS CMS.</p>
+</section>
+<section id="core-endpoints">
+<h2>Core Endpoints<a class="headerlink" href="#core-endpoints" title="Link to this heading"></a></h2>
+<section id="page-management">
+<h3>Page Management<a class="headerlink" href="#page-management" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET /api/pages/
+POST /api/pages/
+GET /api/pages/&lt;id&gt;/
+PUT /api/pages/&lt;id&gt;/
+DELETE /api/pages/&lt;id&gt;/
+</pre></div>
+</div>
+</section>
+<section id="block-management">
+<h3>Block Management<a class="headerlink" href="#block-management" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET /api/blocks/
+POST /api/blocks/
+GET /api/blocks/&lt;id&gt;/
+PUT /api/blocks/&lt;id&gt;/
+DELETE /api/blocks/&lt;id&gt;/
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="authentication.html" class="btn btn-neutral float-right" title="Authentication" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maximiliano Santander.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

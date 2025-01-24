@@ -1,0 +1,600 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter {\sphinxsymbolsname}
+  \item \spxentry{\_\_author\_\_}\spxextra{in module pages\_app}, \hyperpage{52}
+  \item \spxentry{\_\_version\_\_}\spxextra{in module pages\_app}, \hyperpage{52}
+
+  \indexspace
+  \bigletter A
+  \item \spxentry{abstract}\spxextra{pages\_app.models.base.TimestampedModel.Meta attribute}, 
+		\hyperpage{19}
+
+  \indexspace
+  \bigletter B
+  \item \spxentry{Block}\spxextra{class in pages\_app.models}, \hyperpage{31}
+  \item \spxentry{Block}\spxextra{class in pages\_app.models.block}, \hyperpage{19}
+  \item \spxentry{block}\spxextra{pages\_app.models.page\_block.PageBlock attribute}, 
+		\hyperpage{28, 29}
+  \item \spxentry{block}\spxextra{pages\_app.models.PageBlock attribute}, \hyperpage{38}
+  \item \spxentry{Block.DoesNotExist}, \hyperpage{20}, \hyperpage{31}
+  \item \spxentry{Block.MultipleObjectsReturned}, \hyperpage{20}, \hyperpage{32}
+  \item \spxentry{block\_id}\spxextra{pages\_app.models.page\_block.PageBlock attribute}, 
+		\hyperpage{29}
+  \item \spxentry{block\_id}\spxextra{pages\_app.models.PageBlock attribute}, \hyperpage{39}
+  \item \spxentry{BlockAdmin}\spxextra{class in pages\_app.admin}, \hyperpage{49}
+  \item \spxentry{BlockModelTest}\spxextra{class in pages\_app.tests.test\_models}, \hyperpage{41}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{CacheTests}\spxextra{class in pages\_app.tests.test\_cache}, \hyperpage{40}
+  \item \spxentry{clean()}\spxextra{pages\_app.models.Page method}, \hyperpage{36}
+  \item \spxentry{clean()}\spxextra{pages\_app.models.page.Page method}, \hyperpage{26}
+  \item \spxentry{content}\spxextra{pages\_app.models.Block attribute}, \hyperpage{31}
+  \item \spxentry{content}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{20}
+  \item \spxentry{created\_at}\spxextra{in module pages\_app.models.base}, \hyperpage{18}
+  \item \spxentry{created\_at}\spxextra{pages\_app.models.base.TimestampedModel attribute}, 
+		\hyperpage{18, 19}
+  \item \spxentry{created\_at}\spxextra{pages\_app.models.Block attribute}, \hyperpage{32}
+  \item \spxentry{created\_at}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{20}
+  \item \spxentry{created\_at}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{23}
+  \item \spxentry{created\_at}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{34}
+  \item \spxentry{created\_at}\spxextra{pages\_app.models.Page attribute}, \hyperpage{36}
+  \item \spxentry{created\_at}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{26}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{default\_auto\_field}\spxextra{pages\_app.apps.PagesAppConfig attribute}, 
+		\hyperpage{50}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0001\_initial.Migration attribute}, 
+		\hyperpage{12}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0002\_menuitem\_name.Migration attribute}, 
+		\hyperpage{13}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0003\_block\_name\_page\_name.Migration attribute}, 
+		\hyperpage{13}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0004\_alter\_block\_name.Migration attribute}, 
+		\hyperpage{14}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more.Migration attribute}, 
+		\hyperpage{14}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0006\_block\_image\_historicalblock\_image.Migration attribute}, 
+		\hyperpage{16}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{16}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{16}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{16}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{17}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{17}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0012\_block\_script\_historicalblock\_script.Migration attribute}, 
+		\hyperpage{17}
+  \item \spxentry{dependencies}\spxextra{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script.Migration attribute}, 
+		\hyperpage{18}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{get\_block\_name()}\spxextra{pages\_app.admin.PageBlockAdmin method}, 
+		\hyperpage{50}
+  \item \spxentry{get\_image\_url()}\spxextra{pages\_app.models.Block method}, \hyperpage{32}
+  \item \spxentry{get\_image\_url()}\spxextra{pages\_app.models.block.Block method}, \hyperpage{20}
+  \item \spxentry{get\_language\_display()}\spxextra{pages\_app.models.Page method}, \hyperpage{36}
+  \item \spxentry{get\_language\_display()}\spxextra{pages\_app.models.page.Page method}, 
+		\hyperpage{26}
+  \item \spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.base.TimestampedModel method}, 
+		\hyperpage{19}
+  \item \spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.Block method}, 
+		\hyperpage{32}
+  \item \spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.block.Block method}, 
+		\hyperpage{21}
+  \item \spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.menu\_item.MenuItem method}, 
+		\hyperpage{23}
+  \item \spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.MenuItem method}, 
+		\hyperpage{34}
+  \item \spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.Page method}, 
+		\hyperpage{36}
+  \item \spxentry{get\_next\_by\_created\_at()}\spxextra{pages\_app.models.page.Page method}, 
+		\hyperpage{26}
+  \item \spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.base.TimestampedModel method}, 
+		\hyperpage{19}
+  \item \spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.Block method}, 
+		\hyperpage{32}
+  \item \spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.block.Block method}, 
+		\hyperpage{21}
+  \item \spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.menu\_item.MenuItem method}, 
+		\hyperpage{23}
+  \item \spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.MenuItem method}, 
+		\hyperpage{34}
+  \item \spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.Page method}, 
+		\hyperpage{36}
+  \item \spxentry{get\_next\_by\_updated\_at()}\spxextra{pages\_app.models.page.Page method}, 
+		\hyperpage{26}
+  \item \spxentry{get\_page\_title()}\spxextra{pages\_app.admin.PageBlockAdmin method}, 
+		\hyperpage{50}
+  \item \spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.base.TimestampedModel method}, 
+		\hyperpage{19}
+  \item \spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.Block method}, 
+		\hyperpage{32}
+  \item \spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.block.Block method}, 
+		\hyperpage{21}
+  \item \spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.menu\_item.MenuItem method}, 
+		\hyperpage{23}
+  \item \spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.MenuItem method}, 
+		\hyperpage{34}
+  \item \spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.Page method}, 
+		\hyperpage{36}
+  \item \spxentry{get\_previous\_by\_created\_at()}\spxextra{pages\_app.models.page.Page method}, 
+		\hyperpage{26}
+  \item \spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.base.TimestampedModel method}, 
+		\hyperpage{19}
+  \item \spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.Block method}, 
+		\hyperpage{32}
+  \item \spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.block.Block method}, 
+		\hyperpage{21}
+  \item \spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.menu\_item.MenuItem method}, 
+		\hyperpage{23}
+  \item \spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.MenuItem method}, 
+		\hyperpage{34}
+  \item \spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.Page method}, 
+		\hyperpage{36}
+  \item \spxentry{get\_previous\_by\_updated\_at()}\spxextra{pages\_app.models.page.Page method}, 
+		\hyperpage{26}
+
+  \indexspace
+  \bigletter H
+  \item \spxentry{history}\spxextra{pages\_app.models.Block attribute}, \hyperpage{31, 32}
+  \item \spxentry{history}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{20, 21}
+  \item \spxentry{history}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{22, 23}
+  \item \spxentry{history}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{33, 34}
+  \item \spxentry{history}\spxextra{pages\_app.models.Page attribute}, \hyperpage{35, 36}
+  \item \spxentry{history}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{25, 26}
+  \item \spxentry{history}\spxextra{pages\_app.models.page\_block.PageBlock attribute}, 
+		\hyperpage{28, 29}
+  \item \spxentry{history}\spxextra{pages\_app.models.PageBlock attribute}, \hyperpage{38, 39}
+  \item \spxentry{history\_list\_display}\spxextra{pages\_app.admin.BlockAdmin attribute}, 
+		\hyperpage{49}
+  \item \spxentry{history\_list\_display}\spxextra{pages\_app.admin.MenuItemAdmin attribute}, 
+		\hyperpage{49}
+  \item \spxentry{history\_list\_display}\spxextra{pages\_app.admin.PageAdmin attribute}, 
+		\hyperpage{49}
+  \item \spxentry{history\_list\_display}\spxextra{pages\_app.admin.PageBlockAdmin attribute}, 
+		\hyperpage{50}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{id}\spxextra{pages\_app.models.Block attribute}, \hyperpage{32}
+  \item \spxentry{id}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{21}
+  \item \spxentry{id}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, \hyperpage{23}
+  \item \spxentry{id}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{34}
+  \item \spxentry{id}\spxextra{pages\_app.models.Page attribute}, \hyperpage{36}
+  \item \spxentry{id}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{26}
+  \item \spxentry{id}\spxextra{pages\_app.models.page\_block.PageBlock attribute}, \hyperpage{29}
+  \item \spxentry{id}\spxextra{pages\_app.models.PageBlock attribute}, \hyperpage{39}
+  \item \spxentry{image}\spxextra{in module pages\_app.models.block}, \hyperpage{19}
+  \item \spxentry{image}\spxextra{pages\_app.models.Block attribute}, \hyperpage{31, 32}
+  \item \spxentry{image}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{20, 21}
+  \item \spxentry{initial}\spxextra{pages\_app.migrations.0001\_initial.Migration attribute}, 
+		\hyperpage{12}
+  \item \spxentry{invalidate\_cache()}\spxextra{in module pages\_app.models.signals}, 
+		\hyperpage{30}
+  \item \spxentry{is\_published}\spxextra{pages\_app.models.Page property}, \hyperpage{36}
+  \item \spxentry{is\_published}\spxextra{pages\_app.models.page.Page property}, \hyperpage{26}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{language}\spxextra{in module pages\_app.models.page}, \hyperpage{24}
+  \item \spxentry{language}\spxextra{pages\_app.models.Page attribute}, \hyperpage{35, 36}
+  \item \spxentry{language}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{25, 26}
+  \item \spxentry{LANGUAGE\_CHOICES}\spxextra{pages\_app.models.Page attribute}, \hyperpage{36}
+  \item \spxentry{LANGUAGE\_CHOICES}\spxextra{pages\_app.models.page.Page attribute}, 
+		\hyperpage{26}
+  \item \spxentry{list\_display}\spxextra{pages\_app.admin.BlockAdmin attribute}, \hyperpage{49}
+  \item \spxentry{list\_display}\spxextra{pages\_app.admin.MenuItemAdmin attribute}, \hyperpage{49}
+  \item \spxentry{list\_display}\spxextra{pages\_app.admin.PageAdmin attribute}, \hyperpage{49}
+  \item \spxentry{list\_display}\spxextra{pages\_app.admin.PageBlockAdmin attribute}, 
+		\hyperpage{50}
+  \item \spxentry{list\_filter}\spxextra{pages\_app.admin.PageBlockAdmin attribute}, \hyperpage{50}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{media}\spxextra{pages\_app.admin.BlockAdmin property}, \hyperpage{49}
+  \item \spxentry{media}\spxextra{pages\_app.admin.MenuItemAdmin property}, \hyperpage{49}
+  \item \spxentry{media}\spxextra{pages\_app.admin.PageAdmin property}, \hyperpage{49}
+  \item \spxentry{media}\spxextra{pages\_app.admin.PageBlockAdmin property}, \hyperpage{50}
+  \item \spxentry{MenuItem}\spxextra{class in pages\_app.models}, \hyperpage{33}
+  \item \spxentry{MenuItem}\spxextra{class in pages\_app.models.menu\_item}, \hyperpage{22}
+  \item \spxentry{MenuItem.DoesNotExist}, \hyperpage{23}, \hyperpage{34}
+  \item \spxentry{MenuItem.MultipleObjectsReturned}, \hyperpage{23}, \hyperpage{34}
+  \item \spxentry{menuitem\_set}\spxextra{pages\_app.models.Page attribute}, \hyperpage{36}
+  \item \spxentry{menuitem\_set}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{26}
+  \item \spxentry{MenuItemAdmin}\spxextra{class in pages\_app.admin}, \hyperpage{49}
+  \item \spxentry{MenuItemModelTest}\spxextra{class in pages\_app.tests.test\_models}, 
+		\hyperpage{42}
+  \item \spxentry{meta\_description}\spxextra{in module pages\_app.models.page}, \hyperpage{24}
+  \item \spxentry{meta\_description}\spxextra{pages\_app.models.Page attribute}, \hyperpage{35}, 
+		\hyperpage{37}
+  \item \spxentry{meta\_description}\spxextra{pages\_app.models.page.Page attribute}, 
+		\hyperpage{25}, \hyperpage{27}
+  \item \spxentry{meta\_keywords}\spxextra{in module pages\_app.models.page}, \hyperpage{24}
+  \item \spxentry{meta\_keywords}\spxextra{pages\_app.models.Page attribute}, \hyperpage{35}, 
+		\hyperpage{37}
+  \item \spxentry{meta\_keywords}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{25}, 
+		\hyperpage{27}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0001\_initial}, \hyperpage{12}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0002\_menuitem\_name}, 
+		\hyperpage{13}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0003\_block\_name\_page\_name}, 
+		\hyperpage{13}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0004\_alter\_block\_name}, 
+		\hyperpage{14}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more}, 
+		\hyperpage{14}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0006\_block\_image\_historicalblock\_image}, 
+		\hyperpage{16}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}, 
+		\hyperpage{16}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}, 
+		\hyperpage{16}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}, 
+		\hyperpage{16}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}, 
+		\hyperpage{17}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}, 
+		\hyperpage{17}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0012\_block\_script\_historicalblock\_script}, 
+		\hyperpage{17}
+  \item \spxentry{Migration}\spxextra{class in pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script}, 
+		\hyperpage{18}
+  \item \spxentry{module}
+    \subitem \spxentry{pages\_app}, \hyperpage{52}
+    \subitem \spxentry{pages\_app.admin}, \hyperpage{49}
+    \subitem \spxentry{pages\_app.apps}, \hyperpage{50}
+    \subitem \spxentry{pages\_app.migrations}, \hyperpage{18}
+    \subitem \spxentry{pages\_app.migrations.0001\_initial}, \hyperpage{12}
+    \subitem \spxentry{pages\_app.migrations.0002\_menuitem\_name}, \hyperpage{13}
+    \subitem \spxentry{pages\_app.migrations.0003\_block\_name\_page\_name}, \hyperpage{13}
+    \subitem \spxentry{pages\_app.migrations.0004\_alter\_block\_name}, \hyperpage{14}
+    \subitem \spxentry{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more}, 
+		\hyperpage{14}
+    \subitem \spxentry{pages\_app.migrations.0006\_block\_image\_historicalblock\_image}, 
+		\hyperpage{16}
+    \subitem \spxentry{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}, 
+		\hyperpage{16}
+    \subitem \spxentry{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}, 
+		\hyperpage{16}
+    \subitem \spxentry{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}, 
+		\hyperpage{16}
+    \subitem \spxentry{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}, 
+		\hyperpage{17}
+    \subitem \spxentry{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}, 
+		\hyperpage{17}
+    \subitem \spxentry{pages\_app.migrations.0012\_block\_script\_historicalblock\_script}, 
+		\hyperpage{17}
+    \subitem \spxentry{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script}, 
+		\hyperpage{18}
+    \subitem \spxentry{pages\_app.models}, \hyperpage{30}
+    \subitem \spxentry{pages\_app.models.base}, \hyperpage{18}
+    \subitem \spxentry{pages\_app.models.block}, \hyperpage{19}
+    \subitem \spxentry{pages\_app.models.menu\_item}, \hyperpage{22}
+    \subitem \spxentry{pages\_app.models.page}, \hyperpage{24}
+    \subitem \spxentry{pages\_app.models.page\_block}, \hyperpage{28}
+    \subitem \spxentry{pages\_app.models.signals}, \hyperpage{30}
+    \subitem \spxentry{pages\_app.tests}, \hyperpage{46}
+    \subitem \spxentry{pages\_app.tests.test\_cache}, \hyperpage{39}
+    \subitem \spxentry{pages\_app.tests.test\_models}, \hyperpage{41}
+    \subitem \spxentry{pages\_app.tests.test\_views}, \hyperpage{46}
+    \subitem \spxentry{pages\_app.urls}, \hyperpage{50}
+    \subitem \spxentry{pages\_app.views}, \hyperpage{48}, \hyperpage{51}
+    \subitem \spxentry{pages\_app.views.home}, \hyperpage{6}, \hyperpage{47}
+    \subitem \spxentry{pages\_app.views.page}, \hyperpage{8}, \hyperpage{47}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{name}\spxextra{in module pages\_app.models.block}, \hyperpage{19}
+  \item \spxentry{name}\spxextra{in module pages\_app.models.page}, \hyperpage{24}
+  \item \spxentry{name}\spxextra{pages\_app.apps.PagesAppConfig attribute}, \hyperpage{50}
+  \item \spxentry{name}\spxextra{pages\_app.models.Block attribute}, \hyperpage{31, 32}
+  \item \spxentry{name}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{20, 21}
+  \item \spxentry{name}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{22, 23}
+  \item \spxentry{name}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{33, 34}
+  \item \spxentry{name}\spxextra{pages\_app.models.Page attribute}, \hyperpage{35}, \hyperpage{37}
+  \item \spxentry{name}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{25}, 
+		\hyperpage{27}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{objects}\spxextra{pages\_app.models.Block attribute}, \hyperpage{32}
+  \item \spxentry{objects}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{21}
+  \item \spxentry{objects}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{23}
+  \item \spxentry{objects}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{34}
+  \item \spxentry{objects}\spxextra{pages\_app.models.Page attribute}, \hyperpage{37}
+  \item \spxentry{objects}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{27}
+  \item \spxentry{objects}\spxextra{pages\_app.models.page\_block.PageBlock attribute}, 
+		\hyperpage{29}
+  \item \spxentry{objects}\spxextra{pages\_app.models.PageBlock attribute}, \hyperpage{39}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0001\_initial.Migration attribute}, 
+		\hyperpage{12}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0002\_menuitem\_name.Migration attribute}, 
+		\hyperpage{13}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0003\_block\_name\_page\_name.Migration attribute}, 
+		\hyperpage{13}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0004\_alter\_block\_name.Migration attribute}, 
+		\hyperpage{14}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more.Migration attribute}, 
+		\hyperpage{14}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0006\_block\_image\_historicalblock\_image.Migration attribute}, 
+		\hyperpage{16}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{16}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{16}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{16}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{17}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more.Migration attribute}, 
+		\hyperpage{17}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0012\_block\_script\_historicalblock\_script.Migration attribute}, 
+		\hyperpage{17}
+  \item \spxentry{operations}\spxextra{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script.Migration attribute}, 
+		\hyperpage{18}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{Page}\spxextra{class in pages\_app.models}, \hyperpage{35}
+  \item \spxentry{Page}\spxextra{class in pages\_app.models.page}, \hyperpage{25}
+  \item \spxentry{page}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{22, 23}
+  \item \spxentry{page}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{33, 34}
+  \item \spxentry{page}\spxextra{pages\_app.models.page\_block.PageBlock attribute}, 
+		\hyperpage{28, 29}
+  \item \spxentry{page}\spxextra{pages\_app.models.PageBlock attribute}, \hyperpage{38, 39}
+  \item \spxentry{Page.DoesNotExist}, \hyperpage{26}, \hyperpage{36}
+  \item \spxentry{Page.MultipleObjectsReturned}, \hyperpage{26}, \hyperpage{36}
+  \item \spxentry{page\_id}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{24}
+  \item \spxentry{page\_id}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{34}
+  \item \spxentry{page\_id}\spxextra{pages\_app.models.page\_block.PageBlock attribute}, 
+		\hyperpage{29}
+  \item \spxentry{page\_id}\spxextra{pages\_app.models.PageBlock attribute}, \hyperpage{39}
+  \item \spxentry{PageAdmin}\spxextra{class in pages\_app.admin}, \hyperpage{49}
+  \item \spxentry{PageBlock}\spxextra{class in pages\_app.models}, \hyperpage{38}
+  \item \spxentry{PageBlock}\spxextra{class in pages\_app.models.page\_block}, \hyperpage{28}
+  \item \spxentry{PageBlock.DoesNotExist}, \hyperpage{29}, \hyperpage{38}
+  \item \spxentry{PageBlock.MultipleObjectsReturned}, \hyperpage{29}, \hyperpage{38}
+  \item \spxentry{pageblock\_set}\spxextra{pages\_app.models.Block attribute}, \hyperpage{32}
+  \item \spxentry{pageblock\_set}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{21}
+  \item \spxentry{pageblock\_set}\spxextra{pages\_app.models.Page attribute}, \hyperpage{37}
+  \item \spxentry{pageblock\_set}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{27}
+  \item \spxentry{PageBlockAdmin}\spxextra{class in pages\_app.admin}, \hyperpage{50}
+  \item \spxentry{PageBlockModelTest}\spxextra{class in pages\_app.tests.test\_models}, 
+		\hyperpage{42}
+  \item \spxentry{PageModelTest}\spxextra{class in pages\_app.tests.test\_models}, \hyperpage{43}
+  \item \spxentry{pages\_app}
+    \subitem \spxentry{module}, \hyperpage{52}
+  \item \spxentry{pages\_app.admin}
+    \subitem \spxentry{module}, \hyperpage{49}
+  \item \spxentry{pages\_app.apps}
+    \subitem \spxentry{module}, \hyperpage{50}
+  \item \spxentry{pages\_app.migrations}
+    \subitem \spxentry{module}, \hyperpage{18}
+  \item \spxentry{pages\_app.migrations.0001\_initial}
+    \subitem \spxentry{module}, \hyperpage{12}
+  \item \spxentry{pages\_app.migrations.0002\_menuitem\_name}
+    \subitem \spxentry{module}, \hyperpage{13}
+  \item \spxentry{pages\_app.migrations.0003\_block\_name\_page\_name}
+    \subitem \spxentry{module}, \hyperpage{13}
+  \item \spxentry{pages\_app.migrations.0004\_alter\_block\_name}
+    \subitem \spxentry{module}, \hyperpage{14}
+  \item \spxentry{pages\_app.migrations.0005\_historicalblock\_historicalmenuitem\_historicalpage\_and\_more}
+    \subitem \spxentry{module}, \hyperpage{14}
+  \item \spxentry{pages\_app.migrations.0006\_block\_image\_historicalblock\_image}
+    \subitem \spxentry{module}, \hyperpage{16}
+  \item \spxentry{pages\_app.migrations.0007\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}
+    \subitem \spxentry{module}, \hyperpage{16}
+  \item \spxentry{pages\_app.migrations.0008\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}
+    \subitem \spxentry{module}, \hyperpage{16}
+  \item \spxentry{pages\_app.migrations.0009\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}
+    \subitem \spxentry{module}, \hyperpage{16}
+  \item \spxentry{pages\_app.migrations.0010\_remove\_page\_pages\_app\_p\_publish\_9c7cf5\_idx\_and\_more}
+    \subitem \spxentry{module}, \hyperpage{17}
+  \item \spxentry{pages\_app.migrations.0011\_remove\_page\_pages\_app\_p\_is\_publ\_d11ecf\_idx\_and\_more}
+    \subitem \spxentry{module}, \hyperpage{17}
+  \item \spxentry{pages\_app.migrations.0012\_block\_script\_historicalblock\_script}
+    \subitem \spxentry{module}, \hyperpage{17}
+  \item \spxentry{pages\_app.migrations.0013\_remove\_block\_script\_remove\_historicalblock\_script}
+    \subitem \spxentry{module}, \hyperpage{18}
+  \item \spxentry{pages\_app.models}
+    \subitem \spxentry{module}, \hyperpage{30}
+  \item \spxentry{pages\_app.models.base}
+    \subitem \spxentry{module}, \hyperpage{18}
+  \item \spxentry{pages\_app.models.block}
+    \subitem \spxentry{module}, \hyperpage{19}
+  \item \spxentry{pages\_app.models.menu\_item}
+    \subitem \spxentry{module}, \hyperpage{22}
+  \item \spxentry{pages\_app.models.page}
+    \subitem \spxentry{module}, \hyperpage{24}
+  \item \spxentry{pages\_app.models.page\_block}
+    \subitem \spxentry{module}, \hyperpage{28}
+  \item \spxentry{pages\_app.models.signals}
+    \subitem \spxentry{module}, \hyperpage{30}
+  \item \spxentry{pages\_app.tests}
+    \subitem \spxentry{module}, \hyperpage{46}
+  \item \spxentry{pages\_app.tests.test\_cache}
+    \subitem \spxentry{module}, \hyperpage{39}
+  \item \spxentry{pages\_app.tests.test\_models}
+    \subitem \spxentry{module}, \hyperpage{41}
+  \item \spxentry{pages\_app.tests.test\_views}
+    \subitem \spxentry{module}, \hyperpage{46}
+  \item \spxentry{pages\_app.urls}
+    \subitem \spxentry{module}, \hyperpage{50}
+  \item \spxentry{pages\_app.views}
+    \subitem \spxentry{module}, \hyperpage{48}, \hyperpage{51}
+  \item \spxentry{pages\_app.views.home}
+    \subitem \spxentry{module}, \hyperpage{6}, \hyperpage{47}
+  \item \spxentry{pages\_app.views.page}
+    \subitem \spxentry{module}, \hyperpage{8}, \hyperpage{47}
+  \item \spxentry{PagesAppConfig}\spxextra{class in pages\_app.apps}, \hyperpage{50}
+  \item \spxentry{position}\spxextra{pages\_app.models.page\_block.PageBlock attribute}, 
+		\hyperpage{28}
+  \item \spxentry{position}\spxextra{pages\_app.models.PageBlock attribute}, \hyperpage{38}
+  \item \spxentry{publish()}\spxextra{pages\_app.models.Page method}, \hyperpage{37}
+  \item \spxentry{publish()}\spxextra{pages\_app.models.page.Page method}, \hyperpage{27}
+  \item \spxentry{published\_at}\spxextra{in module pages\_app.models.page}, \hyperpage{25}
+  \item \spxentry{published\_at}\spxextra{pages\_app.models.Page attribute}, \hyperpage{35}, 
+		\hyperpage{37}
+  \item \spxentry{published\_at}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{25}, 
+		\hyperpage{27}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{ready()}\spxextra{pages\_app.apps.PagesAppConfig method}, \hyperpage{50}
+  \item \spxentry{render\_page()}\spxextra{in module pages\_app.views}, \hyperpage{48}, 
+		\hyperpage{51}
+  \item \spxentry{render\_page()}\spxextra{in module pages\_app.views.home}, \hyperpage{6}, 
+		\hyperpage{8}, \hyperpage{47}
+  \item \spxentry{render\_page()}\spxextra{in module pages\_app.views.page}, \hyperpage{47}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{save()}\spxextra{pages\_app.models.Page method}, \hyperpage{37}
+  \item \spxentry{save()}\spxextra{pages\_app.models.page.Page method}, \hyperpage{27}
+  \item \spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.Block method}, 
+		\hyperpage{32}
+  \item \spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.block.Block method}, 
+		\hyperpage{21}
+  \item \spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.menu\_item.MenuItem method}, 
+		\hyperpage{24}
+  \item \spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.MenuItem method}, 
+		\hyperpage{34}
+  \item \spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.Page method}, 
+		\hyperpage{37}
+  \item \spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.page.Page method}, 
+		\hyperpage{27}
+  \item \spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.page\_block.PageBlock method}, 
+		\hyperpage{29}
+  \item \spxentry{save\_without\_historical\_record()}\spxextra{pages\_app.models.PageBlock method}, 
+		\hyperpage{39}
+  \item \spxentry{search\_fields}\spxextra{pages\_app.admin.PageAdmin attribute}, \hyperpage{49}
+  \item \spxentry{search\_fields}\spxextra{pages\_app.admin.PageBlockAdmin attribute}, 
+		\hyperpage{50}
+  \item \spxentry{setUp()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}, \hyperpage{40}
+  \item \spxentry{setUp()}\spxextra{pages\_app.tests.test\_models.MenuItemModelTest method}, 
+		\hyperpage{42}
+  \item \spxentry{setUp()}\spxextra{pages\_app.tests.test\_models.PageBlockModelTest method}, 
+		\hyperpage{43}
+  \item \spxentry{setUp()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}, 
+		\hyperpage{43}
+  \item \spxentry{setUp()}\spxextra{pages\_app.tests.test\_models.TimestampedModelTest method}, 
+		\hyperpage{45}
+  \item \spxentry{setUp()}\spxextra{pages\_app.tests.test\_views.ViewTests method}, \hyperpage{46}
+  \item \spxentry{sorting}\spxextra{in module pages\_app.models.block}, \hyperpage{19}
+  \item \spxentry{sorting}\spxextra{pages\_app.models.Block attribute}, \hyperpage{31}, 
+		\hyperpage{33}
+  \item \spxentry{sorting}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{20, 21}
+  \item \spxentry{sorting}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{22}, \hyperpage{24}
+  \item \spxentry{sorting}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{33, 34}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{tearDown()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}, 
+		\hyperpage{40}
+  \item \spxentry{tearDown()}\spxextra{pages\_app.tests.test\_views.ViewTests method}, 
+		\hyperpage{46}
+  \item \spxentry{template}\spxextra{in module pages\_app.models.block}, \hyperpage{19}
+  \item \spxentry{template}\spxextra{pages\_app.models.Block attribute}, \hyperpage{31}, 
+		\hyperpage{33}
+  \item \spxentry{template}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{20, 21}
+  \item \spxentry{template}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{22}, \hyperpage{24}
+  \item \spxentry{template}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{33}, 
+		\hyperpage{35}
+  \item \spxentry{test\_block\_creation()}\spxextra{pages\_app.tests.test\_models.BlockModelTest method}, 
+		\hyperpage{41}
+  \item \spxentry{test\_block\_ordering()}\spxextra{pages\_app.tests.test\_models.BlockModelTest method}, 
+		\hyperpage{42}
+  \item \spxentry{test\_cache\_clear()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}, 
+		\hyperpage{40}
+  \item \spxentry{test\_cache\_delete()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}, 
+		\hyperpage{40}
+  \item \spxentry{test\_cache\_set\_get()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}, 
+		\hyperpage{41}
+  \item \spxentry{test\_cache\_timeout()}\spxextra{pages\_app.tests.test\_cache.CacheTests method}, 
+		\hyperpage{41}
+  \item \spxentry{test\_home\_view()}\spxextra{pages\_app.tests.test\_views.ViewTests method}, 
+		\hyperpage{46}
+  \item \spxentry{test\_menu\_item\_creation()}\spxextra{pages\_app.tests.test\_models.MenuItemModelTest method}, 
+		\hyperpage{42}
+  \item \spxentry{test\_menu\_item\_ordering()}\spxextra{pages\_app.tests.test\_models.MenuItemModelTest method}, 
+		\hyperpage{42}
+  \item \spxentry{test\_menu\_item\_page\_deletion()}\spxextra{pages\_app.tests.test\_models.MenuItemModelTest method}, 
+		\hyperpage{42}
+  \item \spxentry{test\_page\_creation()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}, 
+		\hyperpage{43}
+  \item \spxentry{test\_page\_language\_validation()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}, 
+		\hyperpage{44}
+  \item \spxentry{test\_page\_publish\_unpublish()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}, 
+		\hyperpage{44}
+  \item \spxentry{test\_page\_url\_validation()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}, 
+		\hyperpage{44}
+  \item \spxentry{test\_pageblock\_cascade\_deletion()}\spxextra{pages\_app.tests.test\_models.PageBlockModelTest method}, 
+		\hyperpage{43}
+  \item \spxentry{test\_pageblock\_creation()}\spxextra{pages\_app.tests.test\_models.PageBlockModelTest method}, 
+		\hyperpage{43}
+  \item \spxentry{test\_publish\_unpublish()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}, 
+		\hyperpage{44}
+  \item \spxentry{test\_render\_page\_existing\_page()}\spxextra{pages\_app.tests.test\_views.ViewTests method}, 
+		\hyperpage{46}
+  \item \spxentry{test\_render\_page\_nonexistent\_page()}\spxextra{pages\_app.tests.test\_views.ViewTests method}, 
+		\hyperpage{46}
+  \item \spxentry{test\_render\_page\_unpublished\_page()}\spxextra{pages\_app.tests.test\_views.ViewTests method}, 
+		\hyperpage{46}
+  \item \spxentry{test\_timestamps\_creation()}\spxextra{pages\_app.tests.test\_models.TimestampedModelTest method}, 
+		\hyperpage{45}
+  \item \spxentry{test\_updated\_at\_auto\_updates()}\spxextra{pages\_app.tests.test\_models.TimestampedModelTest method}, 
+		\hyperpage{45}
+  \item \spxentry{test\_url\_path\_validation()}\spxextra{pages\_app.tests.test\_models.PageModelTest method}, 
+		\hyperpage{45}
+  \item \spxentry{TimestampedModel}\spxextra{class in pages\_app.models.base}, \hyperpage{18}
+  \item \spxentry{TimestampedModel.Meta}\spxextra{class in pages\_app.models.base}, \hyperpage{18}
+  \item \spxentry{TimestampedModelTest}\spxextra{class in pages\_app.tests.test\_models}, 
+		\hyperpage{45}
+  \item \spxentry{title}\spxextra{in module pages\_app.models.page}, \hyperpage{24}
+  \item \spxentry{title}\spxextra{pages\_app.models.Page attribute}, \hyperpage{35}, \hyperpage{37}
+  \item \spxentry{title}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{25}, 
+		\hyperpage{27}
+
+  \indexspace
+  \bigletter U
+  \item \spxentry{unpublish()}\spxextra{pages\_app.models.Page method}, \hyperpage{37}
+  \item \spxentry{unpublish()}\spxextra{pages\_app.models.page.Page method}, \hyperpage{27}
+  \item \spxentry{updated\_at}\spxextra{in module pages\_app.models.base}, \hyperpage{18}
+  \item \spxentry{updated\_at}\spxextra{pages\_app.models.base.TimestampedModel attribute}, 
+		\hyperpage{18, 19}
+  \item \spxentry{updated\_at}\spxextra{pages\_app.models.Block attribute}, \hyperpage{33}
+  \item \spxentry{updated\_at}\spxextra{pages\_app.models.block.Block attribute}, \hyperpage{22}
+  \item \spxentry{updated\_at}\spxextra{pages\_app.models.menu\_item.MenuItem attribute}, 
+		\hyperpage{24}
+  \item \spxentry{updated\_at}\spxextra{pages\_app.models.MenuItem attribute}, \hyperpage{35}
+  \item \spxentry{updated\_at}\spxextra{pages\_app.models.Page attribute}, \hyperpage{38}
+  \item \spxentry{updated\_at}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{28}
+  \item \spxentry{url\_path}\spxextra{in module pages\_app.models.page}, \hyperpage{24}
+  \item \spxentry{url\_path}\spxextra{pages\_app.models.Page attribute}, \hyperpage{35}, 
+		\hyperpage{38}
+  \item \spxentry{url\_path}\spxextra{pages\_app.models.page.Page attribute}, \hyperpage{25}, 
+		\hyperpage{28}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{ViewTests}\spxextra{class in pages\_app.tests.test\_views}, \hyperpage{46}
+
+\end{sphinxtheindex}

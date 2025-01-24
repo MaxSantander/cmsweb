@@ -1,0 +1,969 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pages_app.tests package &mdash; RIS-Web Backend 1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=56dcb7b8"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pages_app.views package" href="pages_app.views.html" />
+    <link rel="prev" title="pages_app.models package" href="pages_app.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RIS-Web Backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#installation-steps">Installation Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#database-setup">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/index.html#start-development-server">Start Development Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/db_schema.html">Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/db_schema.html#model-overview">Model Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/db_schema.html#model-details">Model Details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#page-model">Page Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#block-model">Block Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#menuitem-model">MenuItem Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models/db_schema.html#key-features">Key Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views/index.html">Views Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="views/home.html">Home View Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#key-functions">Key Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#cache-implementation">Cache Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#models-used">Models Used</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views/page.html">Page Views Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html#key-components">Key Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html#cache-configuration">Cache Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html#dependencies">Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="views/index.html#home-view">Home View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views/index.html#page-view">Page View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment/index.html">Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/index.html#deployment-steps">Deployment Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/index.html#example-configuration">Example Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/endpoints.html">API Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/endpoints.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/endpoints.html#core-endpoints">Core Endpoints</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/authentication.html">Authentication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/authentication.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/authentication.html#authentication-methods">Authentication Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/authentication.html#security-configuration">Security Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/examples.html">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/examples.html#api-usage-examples">API Usage Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/authentication.html">Authentication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/authentication.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/authentication.html#authentication-methods">Authentication Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/authentication.html#security-configuration">Security Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/examples.html#api-usage-examples">API Usage Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/examples.html#page-creation">Page Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/examples.html#block-management">Block Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/examples.html#cache-operations">Cache Operations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/endpoints.html">API Endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/endpoints.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/endpoints.html#core-endpoints">Core Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/endpoints.html#page-management">Page Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/endpoints.html#block-management">Block Management</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pages_app.html">pages_app package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="pages_app.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html">pages_app.migrations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html">pages_app.models package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pages_app.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html">pages_app.views package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app.admin">pages_app.admin module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin"><code class="docutils literal notranslate"><span class="pre">BlockAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin"><code class="docutils literal notranslate"><span class="pre">PageAdmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app.apps">pages_app.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app.urls">pages_app.urls module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#url-patterns">URL Patterns:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pattern-matching">Pattern Matching:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#example-usage">Example Usage:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#see-also">See Also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app.views">pages_app.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#id1">Pages App Views Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.views.render_page"><code class="docutils literal notranslate"><span class="pre">render_page()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#module-pages_app">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.__author__"><code class="docutils literal notranslate"><span class="pre">__author__</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html">API Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/endpoints.html">API Endpoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/authentication.html">Authentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#authentication">Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#endpoints">Endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/index.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="views/index.html">Views Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="views/index.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views/home.html">Home View Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="views/page.html">Page Views Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views/index.html#home-view">Home View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="views/index.html#page-view">Page View</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models/db_schema.html">Database Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#model-overview">Model Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#model-details">Model Details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="models/db_schema.html#page-model">Page Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models/db_schema.html#block-model">Block Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models/db_schema.html#menuitem-model">MenuItem Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="models/db_schema.html#key-features">Key Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="pages_app.html">pages_app package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pages_app.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pages_app.migrations.html">pages_app.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0001_initial">pages_app.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0002_menuitem_name">pages_app.migrations.0002_menuitem_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0003_block_name_page_name">pages_app.migrations.0003_block_name_page_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0004_alter_block_name">pages_app.migrations.0004_alter_block_name module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0005_historicalblock_historicalmenuitem_historicalpage_and_more">pages_app.migrations.0005_historicalblock_historicalmenuitem_historicalpage_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0006_block_image_historicalblock_image">pages_app.migrations.0006_block_image_historicalblock_image module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0007_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0007_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0008_remove_page_pages_app_p_publish_9c7cf5_idx_and_more">pages_app.migrations.0008_remove_page_pages_app_p_publish_9c7cf5_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0009_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0009_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0010_remove_page_pages_app_p_publish_9c7cf5_idx_and_more">pages_app.migrations.0010_remove_page_pages_app_p_publish_9c7cf5_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0011_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more">pages_app.migrations.0011_remove_page_pages_app_p_is_publ_d11ecf_idx_and_more module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0012_block_script_historicalblock_script">pages_app.migrations.0012_block_script_historicalblock_script module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations.0013_remove_block_script_remove_historicalblock_script">pages_app.migrations.0013_remove_block_script_remove_historicalblock_script module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.migrations.html#module-pages_app.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.models.html">pages_app.models package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html#module-pages_app.models.base">pages_app.models.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html#module-pages_app.models.block">pages_app.models.block module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html#module-pages_app.models.menu_item">pages_app.models.menu_item module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html#module-pages_app.models.page">pages_app.models.page module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html#module-pages_app.models.page_block">pages_app.models.page_block module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html#module-pages_app.models.signals">pages_app.models.signals module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.models.html#module-pages_app.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pages_app.tests package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.tests.test_cache">pages_app.tests.test_cache module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.tests.test_models">pages_app.tests.test_models module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.tests.test_views">pages_app.tests.test_views module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pages_app.tests">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.views.html">pages_app.views package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html#module-pages_app.views.home">pages_app.views.home module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html#module-pages_app.views.page">pages_app.views.page module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.views.html#module-pages_app.views">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app.admin">pages_app.admin module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin"><code class="docutils literal notranslate"><span class="pre">BlockAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.BlockAdmin.media"><code class="docutils literal notranslate"><span class="pre">BlockAdmin.media</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.MenuItemAdmin.media"><code class="docutils literal notranslate"><span class="pre">MenuItemAdmin.media</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin"><code class="docutils literal notranslate"><span class="pre">PageAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">PageAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">PageAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin.media"><code class="docutils literal notranslate"><span class="pre">PageAdmin.media</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">PageAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.get_block_name"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.get_block_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.get_page_title"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.get_page_title()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.history_list_display"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.history_list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.list_filter"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.list_filter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.media"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.media</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.admin.PageBlockAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">PageBlockAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app.apps">pages_app.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig.name"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pages_app.html#pages_app.apps.PagesAppConfig.ready"><code class="docutils literal notranslate"><span class="pre">PagesAppConfig.ready()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app.urls">pages_app.urls module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#url-patterns">URL Patterns:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pattern-matching">Pattern Matching:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#example-usage">Example Usage:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#see-also">See Also:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app.views">pages_app.views module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#id1">Pages App Views Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.views.render_page"><code class="docutils literal notranslate"><span class="pre">render_page()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages_app.html#module-pages_app">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages_app.html#pages_app.__author__"><code class="docutils literal notranslate"><span class="pre">__author__</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RIS-Web Backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Modules</a></li>
+          <li class="breadcrumb-item"><a href="pages_app.html">pages_app package</a></li>
+      <li class="breadcrumb-item active">pages_app.tests package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pages_app.tests.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pages-app-tests-package">
+<h1>pages_app.tests package<a class="headerlink" href="#pages-app-tests-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pages_app.tests.test_cache">
+<span id="pages-app-tests-test-cache-module"></span><h2>pages_app.tests.test_cache module<a class="headerlink" href="#module-pages_app.tests.test_cache" title="Link to this heading"></a></h2>
+<section id="cache-tests-module">
+<h3>Cache Tests Module<a class="headerlink" href="#cache-tests-module" title="Link to this heading"></a></h3>
+<p>Tests Redis cache implementation for RIS CMS.
+Verifies cache operations, timeouts, and cleanup.</p>
+<section id="test-cases">
+<h4>Test Cases<a class="headerlink" href="#test-cases" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Basic cache operations (set/get)</p></li>
+<li><p>Cache timeout functionality</p></li>
+<li><p>Cache deletion operations</p></li>
+</ul>
+</section>
+<section id="dependencies">
+<h4>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>django.core.cache</p></li>
+<li><p>django.test.TestCase</p></li>
+<li><p>time</p></li>
+</ul>
+</section>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.tests.test_cache.CacheTests">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.tests.test_cache.</span></span><span class="sig-name descname"><span class="pre">CacheTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_cache.html#CacheTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_cache.CacheTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test suite for Redis cache implementation.</p>
+<p>Tests cache operations and behavior ensuring proper:
+- Data storage and retrieval
+- Timeout functionality
+- Cache clearing</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_cache.CacheTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_cache.html#CacheTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_cache.CacheTests.setUp" title="Link to this definition"></a></dt>
+<dd><p>Initialize test environment.
+Clears cache before each test to ensure isolation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_cache.CacheTests.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_cache.html#CacheTests.tearDown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_cache.CacheTests.tearDown" title="Link to this definition"></a></dt>
+<dd><p>Clean up test environment after each test.</p>
+<dl class="simple">
+<dt>Ensures:</dt><dd><ul class="simple">
+<li><p>Cache is completely cleared</p></li>
+<li><p>No test data remains</p></li>
+<li><p>Next test starts with empty cache</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_cache.CacheTests.test_cache_clear">
+<span class="sig-name descname"><span class="pre">test_cache_clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_cache.html#CacheTests.test_cache_clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_cache.CacheTests.test_cache_clear" title="Link to this definition"></a></dt>
+<dd><p>Test clearing entire cache.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Multiple values can be stored</p></li>
+<li><p>Cache clear removes all values</p></li>
+<li><p>All keys return None after clear</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;key1&quot;</span><span class="p">,</span> <span class="s2">&quot;value1&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;key2&quot;</span><span class="p">,</span> <span class="s2">&quot;value2&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;key1&quot;</span><span class="p">),</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;key2&quot;</span><span class="p">)</span>
+<span class="go">None, None</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_cache.CacheTests.test_cache_delete">
+<span class="sig-name descname"><span class="pre">test_cache_delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_cache.html#CacheTests.test_cache_delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_cache.CacheTests.test_cache_delete" title="Link to this definition"></a></dt>
+<dd><p>Test manual cache deletion.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Data can be manually removed from cache</p></li>
+<li><p>Deleted data returns None</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+<span class="go">None</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_cache.CacheTests.test_cache_set_get">
+<span class="sig-name descname"><span class="pre">test_cache_set_get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_cache.html#CacheTests.test_cache_set_get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_cache.CacheTests.test_cache_set_get" title="Link to this definition"></a></dt>
+<dd><p>Test basic cache set and get operations.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Data can be stored in cache</p></li>
+<li><p>Retrieved data matches stored data</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+<span class="go">&#39;value&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_cache.CacheTests.test_cache_timeout">
+<span class="sig-name descname"><span class="pre">test_cache_timeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_cache.html#CacheTests.test_cache_timeout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_cache.CacheTests.test_cache_timeout" title="Link to this definition"></a></dt>
+<dd><p>Test cache timeout functionality.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Data expires after timeout period</p></li>
+<li><p>Expired data returns None</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 1 second timeout</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+<span class="go">None</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pages_app.tests.test_models">
+<span id="pages-app-tests-test-models-module"></span><h2>pages_app.tests.test_models module<a class="headerlink" href="#module-pages_app.tests.test_models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.BlockModelTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">BlockModelTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#BlockModelTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.BlockModelTest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test suite for Block model functionality.</p>
+<dl class="simple">
+<dt>Tests cover:</dt><dd><ul class="simple">
+<li><p>Block creation and validation</p></li>
+<li><p>Template handling</p></li>
+<li><p>Block ordering</p></li>
+</ul>
+</dd>
+<dt>Related Model:</dt><dd><p>[<cite>Block</cite>](pages_app/models/block.py)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.BlockModelTest.test_block_creation">
+<span class="sig-name descname"><span class="pre">test_block_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#BlockModelTest.test_block_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.BlockModelTest.test_block_creation" title="Link to this definition"></a></dt>
+<dd><p>Test block creation with all fields.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Block name is correctly set</p></li>
+<li><p>Block template is correctly set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.BlockModelTest.test_block_ordering">
+<span class="sig-name descname"><span class="pre">test_block_ordering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#BlockModelTest.test_block_ordering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.BlockModelTest.test_block_ordering" title="Link to this definition"></a></dt>
+<dd><p>Test block ordering by sorting field.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Blocks are ordered by sorting field</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.MenuItemModelTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">MenuItemModelTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#MenuItemModelTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.MenuItemModelTest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test suite for MenuItem model functionality.</p>
+<dl class="simple">
+<dt>Tests cover:</dt><dd><ul class="simple">
+<li><p>MenuItem creation and validation</p></li>
+<li><p>MenuItem ordering</p></li>
+<li><p>MenuItem deletion behavior</p></li>
+</ul>
+</dd>
+<dt>Related Model:</dt><dd><p>[<cite>MenuItem</cite>](pages_app/models/menu_item.py)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.MenuItemModelTest.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#MenuItemModelTest.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.MenuItemModelTest.setUp" title="Link to this definition"></a></dt>
+<dd><p>Initialize test data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.MenuItemModelTest.test_menu_item_creation">
+<span class="sig-name descname"><span class="pre">test_menu_item_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#MenuItemModelTest.test_menu_item_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.MenuItemModelTest.test_menu_item_creation" title="Link to this definition"></a></dt>
+<dd><p>Test menu item creation with all fields.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>MenuItem page relationship is correctly set</p></li>
+<li><p>MenuItem template is correctly set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.MenuItemModelTest.test_menu_item_ordering">
+<span class="sig-name descname"><span class="pre">test_menu_item_ordering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#MenuItemModelTest.test_menu_item_ordering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.MenuItemModelTest.test_menu_item_ordering" title="Link to this definition"></a></dt>
+<dd><p>Test menu item ordering by sorting field.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>MenuItems are ordered by sorting field</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.MenuItemModelTest.test_menu_item_page_deletion">
+<span class="sig-name descname"><span class="pre">test_menu_item_page_deletion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#MenuItemModelTest.test_menu_item_page_deletion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.MenuItemModelTest.test_menu_item_page_deletion" title="Link to this definition"></a></dt>
+<dd><p>Test cascade deletion behavior for MenuItem relationships.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>MenuItem is deleted when parent Page is deleted</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageBlockModelTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">PageBlockModelTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageBlockModelTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageBlockModelTest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test suite for PageBlock model functionality.</p>
+<dl class="simple">
+<dt>Tests cover:</dt><dd><ul class="simple">
+<li><p>PageBlock creation and relationships</p></li>
+<li><p>Cascade deletion behavior</p></li>
+</ul>
+</dd>
+<dt>Related Models:</dt><dd><ul class="simple">
+<li><p>[<cite>Page</cite>](pages_app/models/page.py)</p></li>
+<li><p>[<cite>Block</cite>](pages_app/models/block.py)</p></li>
+<li><p>[<cite>PageBlock</cite>](pages_app/models/page_block.py)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageBlockModelTest.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageBlockModelTest.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageBlockModelTest.setUp" title="Link to this definition"></a></dt>
+<dd><p>Initialize test data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageBlockModelTest.test_pageblock_cascade_deletion">
+<span class="sig-name descname"><span class="pre">test_pageblock_cascade_deletion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageBlockModelTest.test_pageblock_cascade_deletion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageBlockModelTest.test_pageblock_cascade_deletion" title="Link to this definition"></a></dt>
+<dd><p>Test cascade deletion behavior for PageBlock relationships.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>PageBlock is deleted when parent Page is deleted</p></li>
+<li><p>Associated Block remains after Page deletion</p></li>
+<li><p>Proper cleanup of relationship records</p></li>
+</ul>
+</dd>
+<dt>Related Models:</dt><dd><ul class="simple">
+<li><p>[<cite>Page</cite>](pages_app/models/page.py)</p></li>
+<li><p>[<cite>Block</cite>](pages_app/models/block.py)</p></li>
+<li><p>[<cite>PageBlock</cite>](pages_app/models/page_block.py)</p></li>
+</ul>
+</dd>
+<dt>Database Constraints:</dt><dd><ul class="simple">
+<li><p>ON DELETE CASCADE for page foreign key</p></li>
+<li><p>Block relationship preserved</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageBlockModelTest.test_pageblock_creation">
+<span class="sig-name descname"><span class="pre">test_pageblock_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageBlockModelTest.test_pageblock_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageBlockModelTest.test_pageblock_creation" title="Link to this definition"></a></dt>
+<dd><p>Test PageBlock model creation and relationships.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>PageBlock instance creation</p></li>
+<li><p>Correct page relationship</p></li>
+<li><p>Correct block relationship</p></li>
+</ul>
+</dd>
+<dt>Related Models:</dt><dd><ul class="simple">
+<li><p>[<cite>Page</cite>](pages_app/models/page.py)</p></li>
+<li><p>[<cite>Block</cite>](pages_app/models/block.py)</p></li>
+<li><p>[<cite>PageBlock</cite>](pages_app/models/page_block.py)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageModelTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">PageModelTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageModelTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageModelTest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test suite for Page model functionality.
+Tests creation, publication state, and timestamps.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageModelTest.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageModelTest.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageModelTest.setUp" title="Link to this definition"></a></dt>
+<dd><p>Initialize test data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageModelTest.test_page_creation">
+<span class="sig-name descname"><span class="pre">test_page_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageModelTest.test_page_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageModelTest.test_page_creation" title="Link to this definition"></a></dt>
+<dd><p>Test page creation with all fields.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Page title is correctly set</p></li>
+<li><p>URL path is correctly set</p></li>
+<li><p>Language is correctly set</p></li>
+<li><p>Page is not published by default</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageModelTest.test_page_language_validation">
+<span class="sig-name descname"><span class="pre">test_page_language_validation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageModelTest.test_page_language_validation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageModelTest.test_page_language_validation" title="Link to this definition"></a></dt>
+<dd><p>Test page language validation constraints.</p>
+<dl class="simple">
+<dt>Verifies that:</dt><dd><ul class="simple">
+<li><p>Only valid language codes (EN/DE) are accepted</p></li>
+<li><p>Invalid language codes raise ValidationError</p></li>
+</ul>
+</dd>
+<dt>Related Model:</dt><dd><p>[<cite>Page</cite>](pages_app/models/page.py)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – When invalid language code is used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageModelTest.test_page_publish_unpublish">
+<span class="sig-name descname"><span class="pre">test_page_publish_unpublish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageModelTest.test_page_publish_unpublish"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageModelTest.test_page_publish_unpublish" title="Link to this definition"></a></dt>
+<dd><p>Test page publish and unpublish functionality.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Page is unpublished by default</p></li>
+<li><p>Page can be published</p></li>
+<li><p>Page can be unpublished</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageModelTest.test_page_url_validation">
+<span class="sig-name descname"><span class="pre">test_page_url_validation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageModelTest.test_page_url_validation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageModelTest.test_page_url_validation" title="Link to this definition"></a></dt>
+<dd><p>Test page URL validation constraints.</p>
+<dl class="simple">
+<dt>Verifies that:</dt><dd><ul class="simple">
+<li><p>URLs must start with forward slash</p></li>
+<li><p>Invalid URL formats raise ValidationError</p></li>
+<li><p>URL format matches routing requirements</p></li>
+</ul>
+</dd>
+<dt>Related Model:</dt><dd><p>[<cite>Page</cite>](pages_app/models/page.py)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – When URL doesn’t start with forward slash</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageModelTest.test_publish_unpublish">
+<span class="sig-name descname"><span class="pre">test_publish_unpublish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageModelTest.test_publish_unpublish"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageModelTest.test_publish_unpublish" title="Link to this definition"></a></dt>
+<dd><p>Test page publication state management.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>Default unpublished state</p></li>
+<li><p>Successful publication</p></li>
+<li><p>Successful unpublication</p></li>
+<li><p>State transitions</p></li>
+</ul>
+</dd>
+<dt>Related Model:</dt><dd><p>[<cite>Page</cite>](pages_app/models/page.py)</p>
+</dd>
+<dt>Test Steps:</dt><dd><ol class="arabic simple">
+<li><p>Create unpublished page</p></li>
+<li><p>Verify initial state</p></li>
+<li><p>Publish page</p></li>
+<li><p>Verify published state</p></li>
+<li><p>Unpublish page</p></li>
+<li><p>Verify final state</p></li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.PageModelTest.test_url_path_validation">
+<span class="sig-name descname"><span class="pre">test_url_path_validation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#PageModelTest.test_url_path_validation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.PageModelTest.test_url_path_validation" title="Link to this definition"></a></dt>
+<dd><p>Test URL path format validation.</p>
+<dl class="simple">
+<dt>Verifies that:</dt><dd><ul class="simple">
+<li><p>URL paths must start with forward slash</p></li>
+<li><p>Invalid URL paths raise ValidationError</p></li>
+<li><p>URL path format matches routing requirements</p></li>
+</ul>
+</dd>
+<dt>Related Model:</dt><dd><p>[<cite>Page</cite>](pages_app/models/page.py)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValidationError</strong> – When URL path doesn’t start with slash</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.TimestampedModelTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">TimestampedModelTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#TimestampedModelTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.TimestampedModelTest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test suite for timestamp functionality in Page model.</p>
+<dl class="simple">
+<dt>Tests automatic timestamp handling for:</dt><dd><ul class="simple">
+<li><p>Creation timestamps</p></li>
+<li><p>Update timestamps</p></li>
+<li><p>Timestamp accuracy</p></li>
+</ul>
+</dd>
+<dt>Related Model:</dt><dd><p>[<cite>Page</cite>](pages_app/models/page.py)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.TimestampedModelTest.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#TimestampedModelTest.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.TimestampedModelTest.setUp" title="Link to this definition"></a></dt>
+<dd><p>Initialize test data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.TimestampedModelTest.test_timestamps_creation">
+<span class="sig-name descname"><span class="pre">test_timestamps_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#TimestampedModelTest.test_timestamps_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.TimestampedModelTest.test_timestamps_creation" title="Link to this definition"></a></dt>
+<dd><p>Test that timestamps are set on creation.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>created_at is set on creation</p></li>
+<li><p>updated_at is set on creation</p></li>
+<li><p>created_at and updated_at are equal on creation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_models.TimestampedModelTest.test_updated_at_auto_updates">
+<span class="sig-name descname"><span class="pre">test_updated_at_auto_updates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_models.html#TimestampedModelTest.test_updated_at_auto_updates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_models.TimestampedModelTest.test_updated_at_auto_updates" title="Link to this definition"></a></dt>
+<dd><p>Test that updated_at changes on update.</p>
+<dl class="simple">
+<dt>Verifies:</dt><dd><ul class="simple">
+<li><p>updated_at is updated on save</p></li>
+<li><p>created_at remains unchanged on save</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pages_app.tests.test_views">
+<span id="pages-app-tests-test-views-module"></span><h2>pages_app.tests.test_views module<a class="headerlink" href="#module-pages_app.tests.test_views" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pages_app.tests.test_views.ViewTests">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pages_app.tests.test_views.</span></span><span class="sig-name descname"><span class="pre">ViewTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_views.html#ViewTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_views.ViewTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Test suite for the views in the pages_app.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_views.ViewTests.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_views.html#ViewTests.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_views.ViewTests.setUp" title="Link to this definition"></a></dt>
+<dd><p>Set up test data for the test cases.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_views.ViewTests.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_views.html#ViewTests.tearDown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_views.ViewTests.tearDown" title="Link to this definition"></a></dt>
+<dd><p>Clean up after tests.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_views.ViewTests.test_home_view">
+<span class="sig-name descname"><span class="pre">test_home_view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_views.html#ViewTests.test_home_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_views.ViewTests.test_home_view" title="Link to this definition"></a></dt>
+<dd><p>Test the home page view.</p>
+<p>Ensure that the home page is rendered correctly with the expected content.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_views.ViewTests.test_render_page_existing_page">
+<span class="sig-name descname"><span class="pre">test_render_page_existing_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_views.html#ViewTests.test_render_page_existing_page"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_views.ViewTests.test_render_page_existing_page" title="Link to this definition"></a></dt>
+<dd><p>Test rendering an existing page.</p>
+<p>Ensure that an existing page is rendered correctly with the expected content.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_views.ViewTests.test_render_page_nonexistent_page">
+<span class="sig-name descname"><span class="pre">test_render_page_nonexistent_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_views.html#ViewTests.test_render_page_nonexistent_page"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_views.ViewTests.test_render_page_nonexistent_page" title="Link to this definition"></a></dt>
+<dd><p>Test requesting a non-existent page returns 404.</p>
+<p>Ensure that a request to a non-existent page returns a 404 status code.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pages_app.tests.test_views.ViewTests.test_render_page_unpublished_page">
+<span class="sig-name descname"><span class="pre">test_render_page_unpublished_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages_app/tests/test_views.html#ViewTests.test_render_page_unpublished_page"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pages_app.tests.test_views.ViewTests.test_render_page_unpublished_page" title="Link to this definition"></a></dt>
+<dd><p>Test that unpublished pages are not accessible.</p>
+<p>Ensure that a request to an unpublished page returns a 404 status code.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pages_app.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pages_app.tests" title="Link to this heading"></a></h2>
+<section id="test-suite-for-ris-cms">
+<h3>Test Suite for RIS CMS<a class="headerlink" href="#test-suite-for-ris-cms" title="Link to this heading"></a></h3>
+<p>This package contains test modules for the RIS CMS implementation:</p>
+<section id="test-modules">
+<h4>Test Modules<a class="headerlink" href="#test-modules" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>[<cite>test_models.py</cite>](pages_app/tests/test_models.py): Model validation and behavior</p></li>
+<li><p>[<cite>test_views.py</cite>](pages_app/tests/test_views.py): View rendering and routing</p></li>
+<li><p>[<cite>test_cache.py</cite>](pages_app/tests/test_cache.py): Redis caching implementation</p></li>
+</ul>
+</section>
+<section id="test-configuration">
+<h4>Test Configuration<a class="headerlink" href="#test-configuration" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Uses Django’s TestCase</p></li>
+<li><p>Redis for cache testing</p></li>
+<li><p>PostgreSQL for database operations</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt>All tests can be run with:</dt><dd><p>python manage.py test pages_app.tests</p>
+</dd>
+</dl>
+<p>Coverage reports are generated in coverage_report_*.txt</p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pages_app.models.html" class="btn btn-neutral float-left" title="pages_app.models package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pages_app.views.html" class="btn btn-neutral float-right" title="pages_app.views package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Maximiliano Santander.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
